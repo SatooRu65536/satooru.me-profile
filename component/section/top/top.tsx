@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Top() {
   return (
-    <section className={styles.top}>
+    <section className={styles.top} id="top">
       <h1 className={styles.message}>ペンギンを愛でよ。</h1>
 
       <Image

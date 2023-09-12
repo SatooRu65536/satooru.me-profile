@@ -27,7 +27,7 @@ export default function Mainskills() {
   ];
 
   return (
-    <section className={styles.mainskills}>
+    <section className={styles.mainskills} id="main-skills">
       <Progress progress={progress} />
     </section>
   );

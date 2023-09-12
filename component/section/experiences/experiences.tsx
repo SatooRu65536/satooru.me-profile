@@ -70,7 +70,7 @@ export default function Experiences() {
   ];
 
   return (
-    <section className={styles.experiences}>
+    <section className={styles.experiences} id="experiences">
       <h1 className={styles.title}>Experiences</h1>
 
       <div className={styles.container}>

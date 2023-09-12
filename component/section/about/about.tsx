@@ -4,7 +4,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function About() {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <div className={styles.container}>
         <h1 className={styles.name}>佐藤 さとる</h1>
 
