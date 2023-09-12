@@ -1,10 +1,10 @@
 import Header from "@/component/base/header/header";
 import "./globals.css";
-import { BIZ_UDPMincho } from "next/font/google";
+import { Noto_Serif_JP } from "next/font/google";
 
-const biz = BIZ_UDPMincho({
-  weight: ["400", "700"],
-  subsets: ["cyrillic", "greek-ext", "latin", "latin-ext"],
+const noto = Noto_Serif_JP({
+  weight: ["200", "300", "400", "500", "600", "700", "900"],
+  subsets: ["latin"],
 });
 
 export const metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body style={{ fontFamily: `${biz.style.fontFamily}, serif` }}>
+      <body style={{ fontFamily: `${noto.style.fontFamily}, serif` }}>
         <Header />
         {children}
       </body>

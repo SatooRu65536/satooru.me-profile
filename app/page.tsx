@@ -7,6 +7,7 @@ export default function Home() {
     <main className={styles.main}>
       <Top />
       <About />
+      <About />
     </main>
   );
 }
