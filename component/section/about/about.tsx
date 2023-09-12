@@ -1,4 +1,6 @@
+import { RiTwitterXFill } from "@/component/ui/icon/icon";
 import styles from "./about.module.scss";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function About() {
   return (
@@ -15,6 +17,15 @@ export default function About() {
           お世話は面倒なので、いずれペンギン型ロボットが誕生することを願っています。
           本名ではない。
         </p>
+
+        <div className={styles.accounts}>
+          <a className={styles.link} href="https://github.com/SatooRu65536">
+            <GitHubIcon className={styles.icon} />
+          </a>
+          <a className={styles.link} href="https://x.com/SatooRu_65536">
+            <RiTwitterXFill className={styles.icon} />
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -18,5 +18,24 @@
       font-size: 2rem;
       text-indent: 1em;
     }
+
+    .accounts {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+
+      .link {
+        color: initial;
+        transition: color 0.3s;
+
+        .icon {
+          font-size: 3rem;
+        }
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
   }
 }
