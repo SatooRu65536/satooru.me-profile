@@ -1,0 +1,32 @@
+.header {
+  height: 45px;
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    line-height: 45px;
+    font-size: 2.2rem;
+    font-weight: 300;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    margin-block: auto;
+    height: 23px;
+    width: 30px;
+    position: relative;
+    cursor: pointer;
+
+    div {
+      height: 3px;
+      width: 30px;
+      background-color: var(--black);
+      border-radius: 5px;
+      position: absolute;
+      top: calc(10px * var(--i));
+    }
+  }
+}

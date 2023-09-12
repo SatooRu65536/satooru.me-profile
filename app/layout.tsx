@@ -1,7 +1,8 @@
+import Header from "@/component/base/header/header";
 import "./globals.css";
-import { BIZ_UDMincho } from "next/font/google";
+import { BIZ_UDPMincho } from "next/font/google";
 
-const biz = BIZ_UDMincho({ weight: ["400", "700"], subsets: ["latin"] });
+const biz = BIZ_UDPMincho({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata = {
   title: "SatooRu's Profile",
@@ -15,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={biz.className}>{children}</body>
+      <body className={biz.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
