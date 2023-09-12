@@ -4,6 +4,11 @@
   background-color: rgba(255, 255, 255, 0.7);
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 
   .title {
     line-height: 45px;

@@ -3,7 +3,9 @@ import Image from "next/image";
 
 export default function Top() {
   return (
-    <div className={styles.top}>
+    <section className={styles.top}>
+      <h1 className={styles.message}>ペンギンを愛でよ。</h1>
+
       <Image
         className={styles.backgroundImage}
         src="/images/penguin.jpg"
@@ -11,6 +13,6 @@ export default function Top() {
         objectFit="cover"
         alt={"背景"}
       />
-    </div>
+    </section>
   );
 }
