@@ -1,0 +1,129 @@
+.experiences {
+  padding: 30px 0 120px;
+  padding-inline: auto;
+
+  @media (min-width: var(--switch-size)) {
+    padding: 30px 80px 120px;
+  }
+
+  .title {
+    padding: 20px;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .outline {
+    margin-inline: auto;
+    width: fit-content;
+
+    .container {
+      width: fit-content;
+
+      .card {
+        padding: 30px;
+        display: flex;
+
+        .number_container {
+          order: 1;
+          margin-right: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+
+          .number {
+            width: 20px;
+            height: 20px;
+            font-size: 1.4rem;
+            border: 1px solid var(--blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.fill {
+              color: var(--background);
+              background-color: var(--blue);
+            }
+          }
+
+          .line {
+            height: 140px;
+            width: 1px;
+            background-color: var(--blue);
+            border-radius: 1000px;
+            position: absolute;
+            bottom: -100px;
+          }
+        }
+
+        .box {
+          order: 2;
+
+          .content {
+            p {
+              line-height: 4rem;
+            }
+
+            .designation {
+              font-size: 2rem;
+            }
+
+            .name {
+              color: var(--blue);
+              font-size: 1.5rem;
+            }
+
+            .position {
+              font-size: 1.5rem;
+            }
+
+            .overview {
+              font-size: 1.7rem;
+              line-height: 2rem;
+              height: 60px;
+
+              @media (min-width: var(--switch-size)) {
+                line-height: 4rem;
+                height: 80px;
+              }
+            }
+          }
+        }
+      }
+
+      @media (min-width: 1000px) {
+        .card:nth-child(2n - 1) {
+          .number_container {
+            margin-left: 400px;
+          }
+
+          .box {
+            .content {
+              width: 400px;
+            }
+          }
+        }
+
+        .card:nth-child(2n) {
+          .number_container {
+            order: 2;
+          }
+
+          .box {
+            order: 1;
+            width: 400px;
+            text-align: end;
+
+            .content {
+              width: fit-content;
+              padding-right: 50px;
+              margin-left: auto;
+              text-align: start;
+            }
+          }
+        }
+      }
+    }
+  }
+}

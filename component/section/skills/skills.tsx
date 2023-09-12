@@ -61,7 +61,7 @@ export default function Skills() {
   ];
 
   return (
-    <div className={styles.skills}>
+    <section className={styles.skills}>
       <h1 className={styles.title}>Skills</h1>
       <div className={styles.container}>
         {skills.map((item) => {
@@ -73,6 +73,6 @@ export default function Skills() {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 }
