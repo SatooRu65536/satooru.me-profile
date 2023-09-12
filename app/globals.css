@@ -2,12 +2,13 @@
   font-size: 10px;
 
   --accent: #048dff;
-  --white: #ffffff;
-  --black: #000000;
   --background: #e5e9f2;
   --background-light: #f9fafc;
   --background-dark: #123245;
-
+  
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #8392a5;
   --green: #2dca73;
   --blue: #048dff;
   --orange: #fbb400;
