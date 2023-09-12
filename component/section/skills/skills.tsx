@@ -31,7 +31,7 @@ export default function Skills() {
       summary: "特に目的はないけど、楽しそうだから勉強中。",
     },
     {
-      name: "swift/Ruby/PHP",
+      name: "Swift/Ruby/PHP",
       summary: "触ったことがあり、触れるが、触らない。",
     },
     {
