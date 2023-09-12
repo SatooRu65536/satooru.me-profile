@@ -17,4 +17,15 @@ export type Experience = {
   fill?: boolean;
 };
 
+type File = {
+  isFolder: false;
+  name: string;
+};
 
+type Folder = {
+  isFolder: true;
+  name: string;
+  children: Slug[];
+};
+
+export type Slug = File | Folder;
