@@ -1,0 +1,24 @@
+:root {
+  --accent: #048dff;
+  --black: #000000;
+  --background: #e5e9f2;
+  --background-light: #ffffff;
+  --background-dark: #123245;
+
+  --green: #2dca73;
+  --blue: #048dff;
+  --orange: #fbb400;
+  --red: #ff1d29;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
