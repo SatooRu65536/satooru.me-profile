@@ -1,4 +1,6 @@
 .progress {
+  margin-inline: auto;
+  max-width: 900px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 

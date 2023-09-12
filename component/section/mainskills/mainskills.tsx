@@ -7,12 +7,22 @@ export default function Mainskills() {
     {
       name: "HTML/CSS",
       color: "green",
-      persentage: 100,
+      persentage: 95,
     },
     {
       name: "JavaScript",
       color: "orange",
-      persentage: 80,
+      persentage: 95,
+    },
+    {
+      name: "TypeScript",
+      color: "blue",
+      persentage: 70,
+    },
+    {
+      name: "Python",
+      color: "red",
+      persentage: 95,
     },
   ];
 
