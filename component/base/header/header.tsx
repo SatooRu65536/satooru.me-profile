@@ -1,9 +1,11 @@
 "use client";
+import { useRouter } from "next/navigation";
 import styles from "./header.module.scss";
 import { useDisclosure } from "@mantine/hooks";
 
 export default function Header() {
   const [opened, { open, close }] = useDisclosure(false);
+  const router = useRouter();
 
   const navigation = [
     { name: "top", href: "#top" },
@@ -36,7 +38,9 @@ export default function Header() {
       </div>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>SatooRu&apos;s Profile</h1>
+        <h1 className={styles.title} onClick={() => router.push("/")}>
+          SatooRu&apos;s Profile
+        </h1>
 
         <div className={styles.hamburger} onClick={trigle} data-opend={opened}>
           <div style={{ ["--i" as string]: 0 }}></div>

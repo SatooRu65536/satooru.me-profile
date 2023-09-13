@@ -2,6 +2,7 @@
 import { Drawer } from "@mantine/core";
 import styles from "./blogHeader.module.scss";
 import { useDisclosure } from "@mantine/hooks";
+import { useRouter } from "next/navigation";
 
 type Props = {
   children: React.ReactNode;
@@ -9,6 +10,7 @@ type Props = {
 
 export default function BlogHeader({ children }: Props) {
   const [opened, { open, close }] = useDisclosure(false);
+  const router = useRouter();
 
   function trigle() {
     if (opened) close();
@@ -27,7 +29,9 @@ export default function BlogHeader({ children }: Props) {
       </Drawer>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>SatooRu&apos;s Profile</h1>
+        <h1 className={styles.title} onClick={() => router.push("/")}>
+          SatooRu&apos;s Profile
+        </h1>
 
         <div className={styles.hamburger} onClick={trigle} data-opend={opened}>
           <div style={{ ["--i" as string]: 0 }}></div>
