@@ -2,6 +2,7 @@
 title: "技育キャンプキャラバンハッカソン vol.2"
 shorttitle: "技育キャンプキャラバンハッカソン vol.2"
 date: 2023-06-17
+hero: hero.jpg
 ---
 
 # 概要

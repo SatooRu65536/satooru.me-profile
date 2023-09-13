@@ -1,6 +1,7 @@
 ---
 title: "韓国旅行"
 date: 2023-03-31
+hero: hero.jpg
 ---
 
 ### 日時

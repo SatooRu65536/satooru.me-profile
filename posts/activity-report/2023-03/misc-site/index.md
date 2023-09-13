@@ -2,6 +2,7 @@
 title: "情報システム部のサイト作った"
 shorttitle: "情報システム部 サイト"
 date: 2023-03-11
+hero: hero.png
 ---
 
 ### 目的

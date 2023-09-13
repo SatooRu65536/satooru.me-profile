@@ -1,6 +1,7 @@
 ---
 title: "Hugoのインストール"
 date: 2023-06-03
+hero: hero.png
 ---
 
 # HUGO のインストール方法

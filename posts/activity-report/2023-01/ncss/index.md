@@ -2,6 +2,7 @@
 title: "プログラミング言語を作りました"
 shorttitle: "自作プログラミング言語"
 date: 2023-01-07
+hero: hero.png
 ---
 
 ## なぜ

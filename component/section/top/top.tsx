@@ -9,7 +9,7 @@ export default function Top() {
       <Image
         className={styles.backgroundImage}
         src="/images/penguin.jpg"
-        layout="fill"
+        sizes="100%"
         objectFit="cover"
         alt={"背景"}
       />

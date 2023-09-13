@@ -36,5 +36,5 @@ export type Post = {
   content: string;
   title: string;
   shortTitle: string;
-  date: string;
+  date: Date;
 };

@@ -2,6 +2,7 @@
 title: "Macアプリ chindicator"
 shorttitle: "chindicator"
 date: 2023-03-13
+hero: hero.png
 ---
 
 ## きっかけ

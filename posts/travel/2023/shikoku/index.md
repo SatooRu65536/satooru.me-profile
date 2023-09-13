@@ -1,6 +1,7 @@
 ---
 title: "四国旅行"
 date: 2023-02-13
+hero: hero.jpg
 ---
 
 ### 日時

@@ -2,6 +2,7 @@
 title: "出席確認システムを作った-2"
 shorttitle: "出席確認システム-2"
 date: 2022-10-22
+hero: hero.jpg
 ---
 
 [出席確認システムを作った](/posts/activity-report/2022-06/attendanse-system/) の後に、バグが多かったため作り直しました

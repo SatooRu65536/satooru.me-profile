@@ -1,6 +1,7 @@
 ---
 title: "長篠旅行"
 date: 2022-10-22
+hero: hero.jpg
 ---
 
 ### 日時
