@@ -59,6 +59,30 @@ export function getPostBySlug(filePath: string) {
  */
 export function getPosts(path: string) {
   const filepathes = getPostFiles(path);
+  console.log(filepathes);
+
   const posts = filepathes.map((p) => getPostBySlug(p));
   return posts;
+}
+
+// 指定したpath/index.mdの内容を取得する. なければnullを返す
+export function getPostContent(filePath: string): Post | null {
+  const fullPath = path.join(filePath, "index.md");
+  // filePath が存在しない場合は null を返す
+  if (!fs.existsSync(fullPath)) return null;
+
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const { data, content } = matter(fileContents);
+  const heroPath = data.hero ? path.join("/", fullPath, data.hero) : "";
+
+  const items: Post = {
+    slug: fullPath,
+    heroImage: heroPath,
+    content: content,
+    title: data.title || "",
+    shortTitle: data.shortTitle || "",
+    date: data.date || "",
+  };
+
+  return items;
 }

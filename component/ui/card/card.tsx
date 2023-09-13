@@ -4,9 +4,12 @@ import { Post } from "@/types";
 import Image from "next/image";
 import { marked } from "marked";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function PostCard({ post }: { post: Post }) {
   const [text, setText] = useState("");
+  const router = useRouter();
+
   const heroSrc = post.heroImage || "/images/hero.jpg";
   const content = marked(post.content);
 
@@ -18,7 +21,7 @@ export default function PostCard({ post }: { post: Post }) {
   }, [content]);
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={() => router.push(post.slug)}>
       <div className={styles.heroWrapper}>
         <Image
           className={styles.heroImage}
