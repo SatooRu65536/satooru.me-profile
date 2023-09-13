@@ -10,7 +10,8 @@ export default function Top() {
         className={styles.backgroundImage}
         src="/images/penguin.jpg"
         sizes="100%"
-        objectFit="cover"
+        fill
+        priority
         alt={"背景"}
       />
     </section>
