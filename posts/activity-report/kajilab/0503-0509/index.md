@@ -26,12 +26,12 @@ date: 2023-05-09
 
 ## 二次元グラフ化
 ### 各センサーの値
-![各センサーの値](images/output_2.png)
+![各センサーの値](_images/output_2.png)
 
 (前後40サンプルの移動平均フィルターをかけてある)  
 
 ### 二次元グラフ(加速度, 角速度)
-![二次元グラフ](images/output_1.png)
+![二次元グラフ](_images/output_1.png)
 
 1-2階と2-3階が1.5mほどずれている  
 => 階段の歩幅と平坦部の歩幅が異なるから?
@@ -41,18 +41,18 @@ date: 2023-05-09
 1気圧の環境で `1hPa` 下がると `10m` 上があるとして計算
 
 ### 三次元グラフ
-![三次元グラフ](images/output_3.png)
+![三次元グラフ](_images/output_3.png)
 
 ### 三次元グラフ(横から)
-![三次元グラフ](images/output_4.png)
+![三次元グラフ](_images/output_4.png)
 
 階段を登っている様子はわかるが、沈んでしまっている(?)  
 => もっと平滑化すべき?
 
 ### 平滑化を強めた(?)グラフ
-![平滑化を強めたグラフ](images/output_6.png)
+![平滑化を強めたグラフ](_images/output_6.png)
 
-![平滑化を強めたグラフ](images/output_5.png)
+![平滑化を強めたグラフ](_images/output_5.png)
 
 前後160サンプルで平滑化  
 
@@ -70,7 +70,7 @@ Pythonで座標をcsvで書き出して、c#で読み込む
 float.Parse(line[0], System.Globalization.NumberStyles.Float);
 ```
 
-![スクショ](images/screenshot_1.png)
+![スクショ](_images/screenshot_1.png)
 
 動かしながら見れるようになった
 

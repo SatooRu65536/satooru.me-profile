@@ -6,6 +6,7 @@ export function getPostSlugs(): Slug[] {
   const getChildren = (path: string): Slug[] => {
     const children = sync(`${path}/*`);
     return children.map((child) => {
+      // path の中に index.md があれば isFolder とする
       const isFolder = !child.includes(".");
       const name = isFolder
         ? child.replace(path, "").replace("/", "")

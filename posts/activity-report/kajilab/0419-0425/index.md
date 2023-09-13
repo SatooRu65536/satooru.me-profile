@@ -22,7 +22,7 @@ date: 2023-04-25
 (やり方あった)
 
 charGPTに聞きながら作った
-![app](./images/app.png)
+![app](./_images/app.png)
 
 結局使わなかった
 
@@ -42,7 +42,7 @@ charGPTに聞きながら作った
   - itertools
 
 ### 加速度と角速度, 角度のグラフ
-![加速度と角速度, 角度のグラフ](images/output_1.png)
+![加速度と角速度, 角度のグラフ](_images/output_1.png)
 
 1歩を赤丸でプロット  
 角速度を積分して角度を出した  
@@ -59,7 +59,7 @@ charGPTに聞きながら作った
 α度の方向に70cm進んだ位置にプロット
 
 ### 歩行軌跡
-![歩行軌跡1](images/output_2.png)
+![歩行軌跡1](_images/output_2.png)
 
 形は想定通りだが、傾いているのが気になる  
 → 1歩踏み出した時点では腰が斜めになるから?
@@ -74,7 +74,7 @@ charGPTに聞きながら作った
 > step = norm  * 0.027 + 0.33
 
 ### 歩行軌跡
-![歩行軌跡](images/output_3.png)
+![歩行軌跡](_images/output_3.png)
 
 分かりづらい...
 
@@ -101,14 +101,14 @@ charGPTに聞きながら作った
 (見やすいように少数第4位以下切り捨てしてある)
 
 ### 歩行軌跡2
-![歩行軌跡2](./images/output_4.png)
+![歩行軌跡2](./_images/output_4.png)
 
 5歩軽く + 7歩大きく  
 大袈裟にしてみた。  
 
 # メモ
 ### ジャイロセンサーの向き
-![角速度センサーの向き](images/ave-rotate.png)
+![角速度センサーの向き](_images/ave-rotate.png)
 
 ### 積分
 > arr = np.random.rand(100, 10)

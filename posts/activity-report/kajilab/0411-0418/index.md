@@ -63,7 +63,7 @@ date: 2023-04-18
   - サンプリング周波数(100Hz)を考慮していなかった
 
 ### 最終的なグラフ
-![sensing-1](./images/sensing-1.png)
+![sensing-1](./_images/sensing-1.png)
 
 ## 歩数推定
 ### 加速度センサーの値を取る(歩行)
@@ -72,7 +72,7 @@ date: 2023-04-18
 
 ### Pythonでグラフ化し、フィルターをかける
 #### 平滑化フィルター
-![平滑化 5](images/walk2-avg5.png)
+![平滑化 5](_images/walk2-avg5.png)
 > (N0 + N-1 + N-2 + N-3 + N-4) / 5
 
 過去の値を使っています。  
@@ -81,12 +81,12 @@ date: 2023-04-18
 サンプリング周波数が100Hzなので、5つの平均ではあまり意味がない?  
 (n個の平均のnをwindowっていうのか...?)
 
-![平滑化 10](images/walk2-avg10.png)
+![平滑化 10](_images/walk2-avg10.png)
 > (N0 + N-1 + N-2 + ... + N-9) / 10
 
 だいぶ滑らかになったが、1歩に対し頂点が複数ある
 
-![平滑化 20](images/walk2-avg20.png)
+![平滑化 20](_images/walk2-avg20.png)
 > (N0 + N-1 + N-2 + ... + N-19) / 20
 
 1歩に対し1頂点になった。  
@@ -102,10 +102,10 @@ date: 2023-04-18
 
 numpy で平滑化できるっぽい
 
-![ノルム](images/norm-1.png)
+![ノルム](_images/norm-1.png)
 ノルム(window 0)
 
-![ノルム 50](images/norm-50.png)
+![ノルム 50](_images/norm-50.png)
 ノルム(window 50)
 
 
@@ -132,7 +132,7 @@ numpy で平滑化できるっぽい
   - 表: +z
 
 ### 図1
-![加速度センサーの向き](./images/accelerometer_axis.jpg)
+![加速度センサーの向き](./_images/accelerometer_axis.jpg)
 
 
 # 単語帳

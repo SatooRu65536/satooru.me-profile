@@ -2,14 +2,13 @@
 import { Drawer } from "@mantine/core";
 import styles from "./blogHeader.module.scss";
 import { useDisclosure } from "@mantine/hooks";
-import Sidebar from "@/component/blog/sidebar/sidebar";
 
 type Props = {
   children: React.ReactNode;
 };
 
 export default function BlogHeader({ children }: Props) {
-  const [opened, { open, close }] = useDisclosure(false);
+  const [opened, { open, close }] = useDisclosure(true);
 
   function trigle() {
     if (opened) close();
@@ -21,7 +20,7 @@ export default function BlogHeader({ children }: Props) {
       <Drawer
         opened={opened}
         onClose={close}
-        title="Authentication"
+        withCloseButton={false}
         overlayProps={{ opacity: 0.1 }}
       >
         {children}
