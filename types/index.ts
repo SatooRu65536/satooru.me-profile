@@ -29,3 +29,12 @@ export type Folder = {
 };
 
 export type Slug = File | Folder;
+
+export type Post = {
+  slug: string;
+  heroImage: string;
+  content: string;
+  title: string;
+  shortTitle: string;
+  date: string;
+};

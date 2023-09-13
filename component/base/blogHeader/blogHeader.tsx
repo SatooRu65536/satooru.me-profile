@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function BlogHeader({ children }: Props) {
-  const [opened, { open, close }] = useDisclosure(true);
+  const [opened, { open, close }] = useDisclosure(false);
 
   function trigle() {
     if (opened) close();
