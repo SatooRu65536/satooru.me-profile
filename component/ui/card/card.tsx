@@ -21,7 +21,7 @@ export default function PostCard({ post }: { post: Post }) {
   }, [content]);
 
   return (
-    <div className={styles.card} onClick={() => router.push(post.slug)}>
+    <div className={styles.card} onClick={() => router.push(`/${post.slug}`)}>
       <div className={styles.heroWrapper}>
         <Image
           className={styles.heroImage}
