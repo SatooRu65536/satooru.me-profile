@@ -1,8 +1,9 @@
 .progress {
   margin-inline: auto;
+  width: 100%;
   max-width: 900px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
   .ringProgress {
     margin-inline: auto;
