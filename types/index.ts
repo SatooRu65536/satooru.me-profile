@@ -38,3 +38,10 @@ export type Post = {
   shortTitle: string;
   date: Date;
 };
+
+export type Project = {
+  name: string;
+  summary: string;
+  tags: string[];
+  repo?: string;
+};

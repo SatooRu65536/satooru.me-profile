@@ -1,28 +1,33 @@
+"use client";
+import { Project } from "@/types";
 import styles from "./projects.module.scss";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { useEffect, useState } from "react";
 
 export default function Projects() {
-  type Project = {
-    name: string;
-    summary: string;
-    tags: string[];
-    repo?: string;
-  };
+  const [projects, setProjects] = useState<Project[]>([]);
 
-  const projects: Project[] = [
-    {
-      name: "センシング",
-      summary: "梶研究室での活動。スマホを用いたセンシングと端末姿勢推定",
-      tags: ["Python"],
-      repo: "https://github.com/SatooRu65536/kajilab",
-    },
-    {
-      name: "プロフィールサイト",
-      summary: "AppRouterの勉強を兼ねて、プロフィールサイトを制作",
-      tags: ["Next.js", "TypeScript", "SCSS", "Mantine"],
-      repo: "https://github.com/SatooRu65536/satooru.me",
-    },
-  ];
+  useEffect(() => {
+    const url =
+      "https://api.github.com/users/SatooRu65536/repos?per_page=10&sort=pushed";
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        data.forEach((d: any) => {
+          const updatedAt = new Date(d.updated_at);
+          const twoWeekTime = 1000 * 60 * 60 * 24 * 14;
+          if (new Date().getTime() - updatedAt.getTime() > twoWeekTime) return;
+
+          const name = d.name;
+          const summary = d.description;
+          const tags = d.language ? [d.language] : [];
+          tags.push(...d.topics);
+          const repo = d.html_url;
+          const project: Project = { name, summary, tags, repo };
+          setProjects((projects) => [...projects, project]);
+        });
+      });
+  }, []);
 
   return (
     <section className={styles.projects} id="projects">
