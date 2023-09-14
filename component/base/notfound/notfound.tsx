@@ -1,9 +1,13 @@
+"use client";
 import Image from "next/image";
 import styles from "./notfound.module.scss";
+import { useRouter } from "next/navigation";
 
 export default function NotFound() {
+  const router = useRouter();
+
   return (
-    <div className={styles.notfound}>
+    <div className={styles.notfound} onClick={() => router.push("/")}>
       <div className={styles.imgWrapper}>
         <Image
           className={styles.penguin}
@@ -14,7 +18,6 @@ export default function NotFound() {
           alt="404"
         />
       </div>
-      <h2 className={styles.message}>現在制作中です</h2>
       <div className={styles.lineContainer}></div>
     </div>
   );

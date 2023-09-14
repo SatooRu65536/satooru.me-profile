@@ -1,7 +1,7 @@
-import "../global.css";
+import "./globals.css";
 
 export const metadata = {
-  title: "SatooRu's Profile | 404",
+  title: "404 | SatooRu's Profile",
   description: "SatooRu's Profile",
 };
 
