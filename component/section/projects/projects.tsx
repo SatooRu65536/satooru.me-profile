@@ -51,7 +51,7 @@ export default function Projects() {
               {project.repo && (
                 <a
                   className={styles.github}
-                  href="{{ .repo }}"
+                  href={project.repo}
                   target="_blank"
                   title="github"
                 >
