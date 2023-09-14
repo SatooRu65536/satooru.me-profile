@@ -19,6 +19,9 @@ jobs:
       - name: Install node modules
         run: yarn
 
+      - name: Export
+        run: yarn export
+
       - name: Build
         run: yarn build
 

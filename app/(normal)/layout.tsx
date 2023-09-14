@@ -1,10 +1,10 @@
 import "../globals.css";
 import Header from "@/component/base/header/header";
-import { Noto_Serif_JP } from "next/font/google";
+import { Shippori_Mincho } from "next/font/google";
 import Footer from "@/component/base/footer/footer";
 
-const noto = Noto_Serif_JP({
-  weight: ["200", "300", "400", "500", "600", "700", "900"],
+const noto = Shippori_Mincho({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
