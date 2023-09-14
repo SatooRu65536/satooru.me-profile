@@ -41,7 +41,7 @@ export default function Experiences() {
     },
     {
       description: "メカニカルアーツ部 参加",
-      organization: "MIメカ部SC",
+      organization: "メカ部",
       start: "2020.10",
       end: "2023.03",
       location: "名電高校淳和記念館",
