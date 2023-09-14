@@ -1,4 +1,10 @@
 import "./globals.css";
+import { Shippori_Mincho } from "next/font/google";
+
+const noto = Shippori_Mincho({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "404 | SatooRu's Profile",
@@ -12,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body style={{ fontFamily: `${noto.style.fontFamily}, serif` }}>
+        {children}
+      </body>
     </html>
   );
 }
