@@ -1,3 +1,5 @@
+import "../global.css";
+
 export const metadata = {
   title: "SatooRu's Profile | 404",
   description: "SatooRu's Profile",
