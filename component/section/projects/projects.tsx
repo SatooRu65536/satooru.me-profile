@@ -14,7 +14,7 @@ export default function Projects() {
       .then((res) => res.json())
       .then((data) => {
         data.forEach((d: any) => {
-          const updatedAt = new Date(d.updated_at);
+          const updatedAt = new Date(d.pushed_at);
           const twoWeekTime = 1000 * 60 * 60 * 24 * 14;
           if (new Date().getTime() - updatedAt.getTime() > twoWeekTime) return;
 
