@@ -15,7 +15,7 @@ export default function Header() {
     { name: "experiences", href: "#experiences" },
     { name: "active-projects", href: "#projects" },
     { name: "recent-posts", href: "#recent-posts" },
-    { name: "posts", href: "/posts" },
+    { name: "posts", href: "https://blog.satooru.me/" },
   ];
 
   function trigle() {
