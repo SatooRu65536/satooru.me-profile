@@ -4,7 +4,7 @@ import styles from "./experiences.module.scss";
 export default function Experiences() {
   const experiences: Experience[] = [
     {
-      description: "梶研究室に参加した",
+      description: "梶研究室に参加",
       organization: "梶研",
       start: "2023.04",
       location: "愛工大4号館別館 108",
@@ -17,7 +17,7 @@ export default function Experiences() {
       organization: "SET",
       start: "2023.04",
       location: "愛工大4号館別館 310",
-      overview: "システム工学研究会に入部した",
+      overview: "システム工学研究会に入部",
       url: "https://set1.ie.aitech.ac.jp/",
     },
     {
@@ -36,7 +36,7 @@ export default function Experiences() {
       end: "2023.03",
       location: "名電高校415教室",
       overview:
-        "情報システム(元システムコンピューター)部に転部しました。なんか部長なってた",
+        "情報システム(元システムコンピューター)部に転部。なんか部長なってた",
       url: "https://misc-mdn.dev/",
     },
     {
@@ -45,7 +45,7 @@ export default function Experiences() {
       start: "2020.10",
       end: "2023.03",
       location: "名電高校淳和記念館",
-      overview: "メカニカルアーツ部に参加しました。(実質掛け持ち)",
+      overview: "メカニカルアーツ部に参加。(実質掛け持ち)",
       url: "https://www.meiden.ed.jp/club/detail.html?id=380",
     },
     {
@@ -54,7 +54,7 @@ export default function Experiences() {
       start: "2021.07",
       end: "2022.03",
       location: "名電高校224教室",
-      overview: "情報デザイン部に入部した。",
+      overview: "情報デザイン部に入部。",
       url: "https://meidenid.com/",
     },
     {

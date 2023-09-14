@@ -20,7 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body style={{ fontFamily: `${noto.style.fontFamily}, serif` }}>
+      <body
+        style={{
+          ["--font-serif" as string]: `${noto.style.fontFamily}, serif`,
+        }}
+      >
         <Header />
         {children}
         <Footer />
