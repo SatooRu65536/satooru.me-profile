@@ -43,5 +43,6 @@ export type Project = {
   name: string;
   summary: string;
   tags: string[];
-  repo?: string;
+  repo: string;
+  site: string | undefined;
 };

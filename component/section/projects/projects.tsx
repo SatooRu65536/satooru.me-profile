@@ -2,6 +2,7 @@
 import { Project } from "@/types";
 import styles from "./projects.module.scss";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import WebAssetIcon from "@mui/icons-material/WebAsset";
 import { useEffect, useState } from "react";
 
 export default function Projects() {
@@ -23,7 +24,8 @@ export default function Projects() {
           const tags = d.language ? [d.language] : [];
           tags.push(...d.topics);
           const repo = d.html_url;
-          const project: Project = { name, summary, tags, repo };
+          const site = d.homepage;
+          const project: Project = { name, summary, tags, repo, site };
           setProjects((projects) => [...projects, project]);
         });
       });
@@ -40,24 +42,37 @@ export default function Projects() {
               <div className={styles.name}>{project.name}</div>
               <div className={styles.summary}>{project.summary}</div>
 
-              <div className={styles.tags}>
-                {project.tags.map((tag) => (
-                  <div className={styles.tag} key={tag}>
-                    {tag}
-                  </div>
-                ))}
-              </div>
+              <div className={styles.footer}>
+                <div className={styles.tags} data-links={project.site ? 2 : 1}>
+                  {project.tags.map((tag) => (
+                    <div className={styles.tag} key={tag}>
+                      {tag}
+                    </div>
+                  ))}
+                </div>
 
-              {project.repo && (
-                <a
-                  className={styles.github}
-                  href={project.repo}
-                  target="_blank"
-                  title="github"
-                >
-                  <GitHubIcon className={styles.icon} />
-                </a>
-              )}
+                <div className={styles.links}>
+                  {project.site && (
+                    <a
+                      className={styles.link}
+                      href={project.site}
+                      target="_blank"
+                      title="github"
+                    >
+                      <WebAssetIcon className={styles.icon} />
+                    </a>
+                  )}
+
+                  <a
+                    className={styles.link}
+                    href={project.repo}
+                    target="_blank"
+                    title="github"
+                  >
+                    <GitHubIcon className={styles.icon} />
+                  </a>
+                </div>
+              </div>
             </div>
           );
         })}
