@@ -21,8 +21,8 @@ export default function Projects() {
 
           const name = d.name;
           const summary = d.description;
-          const tags = d.language ? [d.language] : [];
-          tags.push(...d.topics);
+          const tags = d.topics;
+          if (d.language) tags.unshift(d.language);
           const repo = d.html_url;
           const site = d.homepage;
           const project: Project = { name, summary, tags, repo, site };
