@@ -5,6 +5,7 @@ const description = "佐藤さとる のプロフィールサイトです.";
 const url = "https://satooru.me/";
 
 export const metadata = {
+  metadataBase: new URL(url),
   title: siteName,
   description,
   openGraph: {
