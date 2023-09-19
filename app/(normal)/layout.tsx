@@ -9,7 +9,7 @@ const noto = Shippori_Mincho({
 });
 
 const siteName = "'SatooRu's Profile";
-const description = "SatooRu's Profile";
+const description = "佐藤さとる のプロフィールサイトです.";
 const url = "https://satooru.me/";
 
 export const metadata = {
