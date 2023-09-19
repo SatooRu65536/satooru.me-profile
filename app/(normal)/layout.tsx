@@ -8,9 +8,27 @@ const noto = Shippori_Mincho({
   subsets: ["latin"],
 });
 
+const siteName = "'SatooRu's Profile";
+const description = "SatooRu's Profile";
+const url = "https://satooru.me/";
+
 export const metadata = {
-  title: "SatooRu's Profile",
-  description: "SatooRu's Profile",
+  title: siteName,
+  description,
+  openGraph: {
+    title: siteName,
+    description,
+    url,
+    siteName,
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteName,
+    description,
+    site: "@SatooRu_65536",
+  },
 };
 
 export default function RootLayout({
