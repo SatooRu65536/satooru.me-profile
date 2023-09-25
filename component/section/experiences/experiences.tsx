@@ -51,8 +51,8 @@ export default function Experiences() {
     {
       description: "情報デザイン部 入部",
       organization: "AMIDC",
-      start: "2021.07",
-      end: "2022.03",
+      start: "2020.07",
+      end: "2022.09",
       location: "名電高校224教室",
       overview: "情報デザイン部に入部。",
       url: "https://meidenid.com/",
