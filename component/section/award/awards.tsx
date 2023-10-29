@@ -1,5 +1,9 @@
+"use client";
+
+import { jumpToLink } from "@/component/util";
 import styles from "./awards.module.scss";
 import { Award } from "@/types/index";
+import { MaterialSymbolsOpenInNewRounded } from "@/component/ui/icon/icon";
 
 export default function Awards() {
   const awards: Award[] = [
@@ -15,7 +19,7 @@ export default function Awards() {
       name: "SEIKA AWARD 2021",
       description: "なんの特徴もない平凡な日常を表現した動画",
       date: "2021.02",
-      link: "https://www.youtube.com/watch?v=ZVi7Ayouou0",
+      link: "https://youtu.be/ZVi7Ayouou0",
     },
     {
       award: "一般公開",
@@ -75,6 +79,12 @@ export default function Awards() {
               <p className={styles.about}>
                 <span className={styles.award}>[{award.award}]</span>
                 <span>{award.name}</span>
+                {award.link && (
+                  <MaterialSymbolsOpenInNewRounded
+                    className={styles.link}
+                    onClick={() => jumpToLink(award.link as string)}
+                  />
+                )}
               </p>
               <p className={styles.description}>{award.description}</p>
             </div>
