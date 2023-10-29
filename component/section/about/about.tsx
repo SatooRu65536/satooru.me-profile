@@ -19,10 +19,18 @@ export default function About() {
         </p>
 
         <div className={styles.accounts}>
-          <a className={styles.link} href="https://github.com/SatooRu65536">
+          <a
+            className={styles.link}
+            target="_blank"
+            href="https://github.com/SatooRu65536"
+          >
             <GitHubIcon className={styles.icon} />
           </a>
-          <a className={styles.link} href="https://x.com/SatooRu_65536">
+          <a
+            className={styles.link}
+            target="_blank"
+            href="https://x.com/SatooRu_65536"
+          >
             <RiTwitterXFill className={styles.icon} />
           </a>
         </div>
