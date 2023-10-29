@@ -17,6 +17,14 @@ export type Experience = {
   fill?: boolean;
 };
 
+export type Award = {
+  award: string;
+  name: string;
+  date: date;
+  description: string;
+  link?: string;
+}
+
 export type File = {
   isFolder: false;
   name: string;
