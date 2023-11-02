@@ -1,6 +1,6 @@
 import "./globals.css";
 
-const siteName = "'SatooRu's Profile";
+const siteName = "SatooRu's Profile";
 const description = "佐藤さとる のプロフィールサイトです.";
 const url = "https://satooru.me/";
 
