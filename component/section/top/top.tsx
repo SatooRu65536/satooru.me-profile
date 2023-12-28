@@ -8,7 +8,7 @@ export default function Top() {
 
       <Image
         className={styles.backgroundImage}
-        src="/images/penguin.jpg"
+        src="/images/penguin.webp"
         sizes="100%"
         fill
         priority
