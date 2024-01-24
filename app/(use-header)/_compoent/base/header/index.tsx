@@ -7,15 +7,15 @@ export default function Header() {
   const [opened, { open, close }] = useDisclosure(false);
 
   const navigation = [
-    { name: 'top', href: '#top' },
-    { name: 'about', href: '#about' },
-    { name: 'main-skills', href: '#main-skills' },
+    { name: 'top', href: '/#top' },
+    { name: 'about', href: '/#about' },
+    { name: 'main-skills', href: '/#main-skills' },
     { name: 'skills', href: '#skills' },
-    { name: 'awards', href: '#awards' },
-    { name: 'experiences', href: '#experiences' },
-    { name: 'active-projects', href: '#projects' },
-    { name: 'recent-posts', href: '#recent-posts' },
-    { name: 'posts', href: 'https://blog.satooru.me/' },
+    { name: 'awards', href: '/#awards' },
+    { name: 'experiences', href: '/#experiences' },
+    { name: 'active-projects', href: '/#projects' },
+    { name: 'recent-posts', href: '/#recent-posts' },
+    { name: 'posts', href: '/blogs/1' },
   ];
 
   function trigle() {

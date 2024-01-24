@@ -4,7 +4,7 @@ import Card from '@/component/share/card';
 
 export default function RecentPosts() {
   const article = getAllArticles();
-  const recent = article.slice(-3).reverse();
+  const recent = article.slice(0, 3);
 
   return (
     <section className={styles.recent_post} id="recent-post">
