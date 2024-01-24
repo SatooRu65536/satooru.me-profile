@@ -1,4 +1,5 @@
 import styles from './index.module.scss';
+import { formatdate } from '@/component/util/format';
 import { Article, ArticleMetaFormatted } from '@/types';
 
 const DEFAULT_POST_THUMBNAIL = '/images/default.webp';
@@ -23,6 +24,7 @@ export default function Card(props: Props) {
 
         <div className={styles.title_wrapper}>
           <h2 className={styles.product_title}>{article.meta.title}</h2>
+          <p className={styles.date}>{formatdate(article.meta.createdAt)}</p>
         </div>
       </div>
     </a>

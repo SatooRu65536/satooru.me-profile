@@ -50,10 +50,20 @@
     align-items: center;
     text-wrap: balance;
     display: flex;
+    flex: 1;
+    position: relative;
 
     .product_title {
       color: var(--black);
       font-size: 1.5rem;
+    }
+
+    .date {
+      color: var(--black);
+      font-size: 1.3rem;
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
     }
   }
 }
