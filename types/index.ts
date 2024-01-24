@@ -1,5 +1,5 @@
-import { EsaMeta, ArticleMeta, ArticleMetaFormatted, Article } from './article';
-import { Progresses, Experience, Award, Project } from './toppage';
+import { Article, ArticleMeta, ArticleMetaFormatted, EsaMeta, Product } from './article';
+import { Award, Experience, Progresses, Project } from './toppage';
 
-export type { EsaMeta, ArticleMeta, ArticleMetaFormatted, Article };
+export type { EsaMeta, ArticleMeta, ArticleMetaFormatted, Article, Product };
 export type { Progresses, Experience, Award, Project };

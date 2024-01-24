@@ -1,7 +1,7 @@
-import { Article, ArticleMetaFormatted, EsaMeta } from '@/types';
 import fs from 'fs';
-import matter from 'gray-matter';
 import path from 'path';
+import matter from 'gray-matter';
+import { Article, ArticleMetaFormatted, EsaMeta } from '@/types';
 
 const IMAGE_REGEX = /^[\s\n]*(<img.*?src=['"](.*)['"].*>|!\[.*\]\((.*)\))/;
 

@@ -8,7 +8,7 @@ export default function RecentPosts() {
 
   return (
     <section className={styles.recent_post} id="recent-post">
-      <h1 className={styles.title}>Recent Post</h1>
+      <h1 className={styles.title}>Recent Posts</h1>
 
       <div className={styles.container}>
         {recent.map((article) => (

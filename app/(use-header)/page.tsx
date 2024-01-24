@@ -2,6 +2,7 @@ import About from './_compoent/section/about';
 import Awards from './_compoent/section/award';
 import Experiences from './_compoent/section/experiences';
 import Mainskills from './_compoent/section/mainskills';
+import Product from './_compoent/section/product';
 import Projects from './_compoent/section/projects';
 import RecentPosts from './_compoent/section/recentposts';
 import Skills from './_compoent/section/skills';
@@ -19,6 +20,7 @@ export default function Home() {
       <Experiences />
       <RecentPosts />
       <Projects />
+      <Product />
     </main>
   );
 }

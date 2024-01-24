@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import styles from './index.module.scss';
 import Thumbnail from './thumbnail';
 import { formatdate, mdToText } from '@/component/util/format';
 import { Article, ArticleMetaFormatted } from '@/types';
-import styles from './index.module.scss';
 
 const DEFAULT_POST_THUMBNAIL = '/images/default.webp';
 
