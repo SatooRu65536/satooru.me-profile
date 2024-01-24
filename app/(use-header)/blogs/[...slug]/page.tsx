@@ -72,7 +72,9 @@ export default function Page(props: Props) {
       <Pagenation
         pageNum={page || 1}
         PageMax={pagenationMax}
-        getPath={(page) => `/blogs/${page}`}
+        getPath={(page) =>
+          category ? `/blogs/${category}/${page}` : `/blogs/${page}`
+        }
       />
     </main>
   );
