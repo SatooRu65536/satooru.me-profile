@@ -1,28 +1,38 @@
+/**
+ * @package
+ */
+export  type EsaMeta = {
+  title: string;
+  category: string | null;
+  tags: string | null;
+  created_at: string;
+  updated_at: string;
+  published: string;
+  number: number;
+}
+
 type BaseMeta<T extends string[] | null, U extends string | Date> = {
   title: string;
-  category: string;
-  number: number;
   tags: T;
-  created_at: U;
-  updated_at: U;
+  createdAt: U;
 };
 
 /**
  * @package
  */
-export type PageMeta = BaseMeta<string[] | null, string>;
+export type ArticleMeta = BaseMeta<string[] | null, string>;
 
 /**
  * @package
  */
-export type PageMetaFormatted = BaseMeta<string[], Date> & {
+export type ArticleMetaFormatted = BaseMeta<string[], Date> & {
   thumbnail: string | null;
 };
 
 /**
  * @package
  */
-export type Article<T extends PageMeta | PageMetaFormatted> = {
+export type Article<T extends ArticleMeta | ArticleMetaFormatted> = {
   path: string;
   filename: string;
   id: number;

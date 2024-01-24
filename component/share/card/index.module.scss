@@ -1,0 +1,37 @@
+.card {
+  border-radius: 5px;
+  color: var(--black);
+  background-color: var(--background-light);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0.5rem 1rem;
+  position: relative;
+  cursor: pointer;
+
+  .container {
+    padding: 10px 20px;
+
+    .title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 4rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .content {
+      height: 170px;
+      padding: 0 10px;
+      font-size: 1.5rem;
+      line-height: 2.4rem;
+      overflow: hidden;
+      overflow-wrap: break-word;
+    }
+
+    .date {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      text-align: end;
+    }
+  }
+}

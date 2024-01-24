@@ -6,6 +6,7 @@ import Skills from './_compoent/section/skills';
 import Experiences from './_compoent/section/experiences';
 import Projects from './_compoent/section/projects';
 import Awards from './_compoent/section/award';
+import RecentPosts from './_compoent/section/recentposts';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Skills />
       <Awards />
       <Experiences />
+      <RecentPosts />
       <Projects />
     </main>
   );

@@ -1,8 +1,5 @@
-'use client';
-
-import { jumpTo } from '@/component/util';
-import styles from './awards.module.scss';
-import { Award } from '@/types/index';
+import styles from './index.module.scss';
+import { Award } from '@/types';
 import { MaterialSymbolsOpenInNewRounded } from '@/component/share/icon/icon';
 
 export default function Awards() {
@@ -92,10 +89,9 @@ export default function Awards() {
                 <span className={styles.award}>[{award.award}]</span>
                 <span>{award.name}</span>
                 {award.link && (
-                  <MaterialSymbolsOpenInNewRounded
-                    className={styles.link}
-                    onClick={() => jumpTo(award.link as string)}
-                  />
+                  <a href={award.link} target="_blank">
+                    <MaterialSymbolsOpenInNewRounded className={styles.link} />
+                  </a>
                 )}
               </p>
               <p className={styles.description}>{award.description}</p>

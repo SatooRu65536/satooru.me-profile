@@ -1,4 +1,4 @@
-import styles from './mainskills.module.scss';
+import styles from './index.module.scss';
 import Progress from '@/component/share/progress/progress';
 import { Progresses } from '@/types';
 

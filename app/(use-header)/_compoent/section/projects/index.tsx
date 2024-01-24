@@ -1,6 +1,6 @@
 'use client';
 import { Project } from '@/types';
-import styles from './projects.module.scss';
+import styles from './index.module.scss';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WebAssetIcon from '@mui/icons-material/WebAsset';
 import { useEffect, useState } from 'react';

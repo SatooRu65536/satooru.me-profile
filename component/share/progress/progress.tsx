@@ -1,4 +1,5 @@
 'use client';
+
 import styles from './progress.module.scss';
 import { Progresses } from '@/types';
 import { RingProgress } from '@mantine/core';

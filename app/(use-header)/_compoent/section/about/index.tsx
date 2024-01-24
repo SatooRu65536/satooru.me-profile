@@ -1,5 +1,5 @@
 import { RiTwitterXFill } from '@/component/share/icon/icon';
-import styles from './about.module.scss';
+import styles from './index.module.scss';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function About() {

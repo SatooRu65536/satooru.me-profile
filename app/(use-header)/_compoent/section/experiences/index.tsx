@@ -1,5 +1,5 @@
 import { Experience } from '@/types';
-import styles from './experiences.module.scss';
+import styles from './index.module.scss';
 
 export default function Experiences() {
   const experiences: Experience[] = [
@@ -85,8 +85,8 @@ export default function Experiences() {
                         ${styles.number} 
                         ${experience.fill && styles.fill}
                       `}
-                    ></div>
-                    <div className={styles.line}></div>
+                    />
+                    <div className={styles.line} />
                   </div>
 
                   <div className={styles.box}>
