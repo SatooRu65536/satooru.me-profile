@@ -3,7 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { Article, ArticleMetaFormatted, EsaMeta } from '@/types';
 
-const IMAGE_REGEX = /^[\s\n]*(<img.*?src=['"](.*)['"].*>|!\[.*\]\((.*)\))/;
+const IMAGE_REGEX = /[\s\n]*(<img.*?src=['"](.*)['"].*>|!\[.*\]\((.*)\))/;
 
 /**
  * @description カテゴリーを取得する
@@ -70,6 +70,7 @@ function getArticleByFilename(
 
   const matches = md.content.match(IMAGE_REGEX);
   if (matches) article.meta.thumbnail = matches[2] || matches[3];
+  console.log(article.meta.thumbnail);
 
   return article;
 }
