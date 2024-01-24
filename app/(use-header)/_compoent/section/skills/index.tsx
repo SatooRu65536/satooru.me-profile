@@ -1,4 +1,4 @@
-import styles from "./skills.module.scss";
+import styles from "./index.module.scss";
 
 export default function Skills() {
   const skills = [
