@@ -1,7 +1,7 @@
-import styles from './index.module.scss';
-import { getCategories, getCategoryName } from '@/component/util/loadFiles';
-import Tag from './tag';
 import { MaterialSymbolsArrowBackIos } from '../icon/icon';
+import styles from './index.module.scss';
+import Tag from './tag';
+import { getCategories, getCategoryName } from '@/component/util/loadFiles';
 
 export default function BlogNavigation() {
   const categoryNames = getCategories().map((c) => ({
