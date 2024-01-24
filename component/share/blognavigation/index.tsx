@@ -11,7 +11,9 @@ export default function BlogNavigation() {
 
   return (
     <div className={styles.blog_head}>
-      <MaterialSymbolsArrowBackIos className={styles.arrow} />
+      <a href="/">
+        <MaterialSymbolsArrowBackIos className={styles.arrow} />
+      </a>
 
       <Tag id={'/'} name={'全ての記事'} />
       {categoryNames.map((c) => (
