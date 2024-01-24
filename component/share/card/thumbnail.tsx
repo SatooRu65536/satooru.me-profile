@@ -1,5 +1,7 @@
 import styles from './thumbnail.module.scss';
 
+const DEFAULT_POST_THUMBNAIL = '/images/default.webp';
+
 type Props = {
   src: string;
   alt: string;

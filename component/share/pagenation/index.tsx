@@ -13,8 +13,6 @@ export default function Pagenation({ pageNum, PageMax, getPath }: Props) {
   const pageNums = getPagenationNums(pageNum, PageMax, 2);
   const pageNumsLast = pageNums[pageNums.length - 1];
 
-  console.log({ pageNums, pageNumsLast });
-
   return (
     <div className={styles.pagenation}>
       <Button

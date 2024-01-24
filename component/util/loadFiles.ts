@@ -114,7 +114,7 @@ export function getArticles(category: string | undefined): Article<ArticleMetaFo
  * @param id 記事ID
  * @returns 記事
  */
-export function getArticle(category: string, id: number): Article<ArticleMetaFormatted> {
+export function getArticle(category: string, id: string): Article<ArticleMetaFormatted> {
   const filename = `${id}.html.md`;
   return getArticleByFilename(category, filename);
 }

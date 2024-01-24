@@ -1,0 +1,30 @@
+.blog {
+  padding: 70px 0;
+
+  .container {
+    margin-inline: auto;
+    max-width: 800px;
+
+    .title {
+      padding: 0;
+      text-align: center;
+      font-size: 3rem;
+      border-bottom: 1px solid black;
+    }
+
+    .created_at {
+      text-align: end;
+      font-size: 1.5rem;
+      padding-right: 20px;
+    }
+
+    .content {
+      width: 100%;
+      padding: 20px;
+
+      @media (min-width: 750px) {
+        padding: 20px 40px;
+      }
+    }
+  }
+}
