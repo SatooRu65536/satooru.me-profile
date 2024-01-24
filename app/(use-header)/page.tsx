@@ -19,8 +19,8 @@ export default function Home() {
       <Awards />
       <Experiences />
       <RecentPosts />
-      <Projects />
       <Product />
+      <Projects />
     </main>
   );
 }
