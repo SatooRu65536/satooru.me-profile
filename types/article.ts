@@ -1,7 +1,7 @@
 /**
  * @package
  */
-export  type EsaMeta = {
+export type EsaMeta = {
   title: string;
   category: string | null;
   tags: string | null;
@@ -9,7 +9,7 @@ export  type EsaMeta = {
   updated_at: string;
   published: string;
   number: number;
-}
+};
 
 type BaseMeta<T extends string[] | null, U extends string | Date> = {
   title: string;

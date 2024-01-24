@@ -5,13 +5,13 @@
  */
 export function mdToText(md: string): string {
   const text = md
-    .replace(/#+ .*\n/g, "")
-    .replace(/[ |:\\*-]/g, "")
-    .replace(/<.+>/g, "")
-    .replace(/\*/g, "")
-    .replace(/`/g, "")
-    .replace(/\\/g, "")
-    .replace(/\[.*\]\(.*\)/g, "");
+    .replace(/#+ .*\n/g, '')
+    .replace(/[ |:\\*-]/g, '')
+    .replace(/<.+>/g, '')
+    .replace(/\*/g, '')
+    .replace(/`/g, '')
+    .replace(/\\/g, '')
+    .replace(/\[.*\]\(.*\)/g, '');
   return text;
 }
 
@@ -36,5 +36,5 @@ export function formatdate(date: Date): string {
  * @returns { string } 桁数を揃えた文字列
  */
 function toDigits(num: number, n: number): string {
-  return `${num}`.padStart(n, "0");
+  return `${num}`.padStart(n, '0');
 }

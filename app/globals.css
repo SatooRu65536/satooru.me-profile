@@ -89,7 +89,6 @@ a {
     margin: 20px 0;
   }
 
-
   ol {
     list-style: decimal;
   }
@@ -103,7 +102,7 @@ a {
     }
   }
 
-  pre>code {
+  pre > code {
     display: block;
     padding: 10.5px;
     margin: 0 0 11px;

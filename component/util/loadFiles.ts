@@ -3,8 +3,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 
-const IMAGE_REGEX =
-  /^[\s\n]*(<img.*?src=['"](.*)['"].*>|!\[.*\]\((.*)\))/;
+const IMAGE_REGEX = /^[\s\n]*(<img.*?src=['"](.*)['"].*>|!\[.*\]\((.*)\))/;
 
 /**
  * @description カテゴリーを取得する
@@ -26,8 +25,7 @@ export function getCategoryName(category: string): string {
   const contentsDir = path.join(process.cwd(), 'public/articles/');
   const titlePath = path.join(contentsDir, category, '.title');
 
-  if (fs.existsSync(titlePath))
-    return fs.readFileSync(titlePath, "utf8");
+  if (fs.existsSync(titlePath)) return fs.readFileSync(titlePath, 'utf8');
 
   return category;
 }
@@ -38,15 +36,23 @@ export function getCategoryName(category: string): string {
  * @param filename ファイル名
  * @returns 記事
  */
-function getArticleByFilename(dir: string, filename: string): Article<ArticleMetaFormatted> {
+function getArticleByFilename(
+  dir: string,
+  filename: string,
+): Article<ArticleMetaFormatted> {
   const contentsDir = path.join(process.cwd(), 'public/articles/', dir);
   const filePath = path.join(contentsDir, filename);
-  const fileContents = fs.readFileSync(filePath, "utf8");
+  const fileContents = fs.readFileSync(filePath, 'utf8');
   const md = matter(fileContents);
   const meta = md.data as EsaMeta;
 
-  const tags = meta.tags?.split(", ") ?? [];
-  const createdAtStr = parseMetaTag(tags, "date", meta.created_at, /\d{4}-\d{2}-\d{2}/);
+  const tags = meta.tags?.split(', ') ?? [];
+  const createdAtStr = parseMetaTag(
+    tags,
+    'date',
+    meta.created_at,
+    /\d{4}-\d{2}-\d{2}/,
+  );
   const createdAt = new Date(createdAtStr);
 
   const article: Article<ArticleMetaFormatted> = {
@@ -60,7 +66,7 @@ function getArticleByFilename(dir: string, filename: string): Article<ArticleMet
       createdAt: createdAt,
       thumbnail: null,
     },
-  }
+  };
 
   const matches = md.content.match(IMAGE_REGEX);
   if (matches) article.meta.thumbnail = matches[2] || matches[3];
@@ -72,15 +78,21 @@ function getArticleByFilename(dir: string, filename: string): Article<ArticleMet
  * @description 記事を取得する
  * @returns
  */
-export function getArticlesByCategory(dir: string): Article<ArticleMetaFormatted>[] {
+export function getArticlesByCategory(
+  dir: string,
+): Article<ArticleMetaFormatted>[] {
   const contentsDir = path.join(process.cwd(), 'public/articles/', dir);
   const filenames = fs.readdirSync(contentsDir);
   const filteredFilenames = filenames.filter((f) => !f.startsWith('.'));
 
-  const articles = filteredFilenames.map((fname) => getArticleByFilename(dir, fname));
+  const articles = filteredFilenames.map((fname) =>
+    getArticleByFilename(dir, fname),
+  );
 
-  const filteredArticles = articles.filter((a) => a.meta.title !== "README");
-  filteredArticles.sort((a, b) => (a.meta.createdAt > b.meta.createdAt ? -1 : 1));
+  const filteredArticles = articles.filter((a) => a.meta.title !== 'README');
+  filteredArticles.sort((a, b) =>
+    a.meta.createdAt > b.meta.createdAt ? -1 : 1,
+  );
 
   return filteredArticles;
 }
@@ -101,9 +113,10 @@ export function getArticleCount(dir: string): number {
  * @param category カテゴリー
  * @returns 記事
  */
-export function getArticles(category: string | undefined): Article<ArticleMetaFormatted>[] {
-  if (category === undefined)
-    return getAllArticles();
+export function getArticles(
+  category: string | undefined,
+): Article<ArticleMetaFormatted>[] {
+  if (category === undefined) return getAllArticles();
 
   return getArticlesByCategory(category);
 }
@@ -114,13 +127,16 @@ export function getArticles(category: string | undefined): Article<ArticleMetaFo
  * @param id 記事ID
  * @returns 記事
  */
-export function getArticle(category: string, id: string): Article<ArticleMetaFormatted> {
+export function getArticle(
+  category: string,
+  id: string,
+): Article<ArticleMetaFormatted> {
   const filename = `${id}.html.md`;
   return getArticleByFilename(category, filename);
 }
 
 /**
- * @returns 記事を全て取得する 
+ * @returns 記事を全て取得する
  */
 export function getAllArticles(): Article<ArticleMetaFormatted>[] {
   const contentsDir = path.join(process.cwd(), 'public/articles/');
@@ -149,7 +165,7 @@ function parseMetaTag(
   check?: RegExp,
 ): string {
   const tag = tags?.filter((tag) => tag.startsWith(`${key}:`))[0];
-  const value = tag && tag.replace(`${key}:`, "");
+  const value = tag && tag.replace(`${key}:`, '');
 
   if (check === undefined) return value ?? defaultValue;
 
