@@ -13,9 +13,11 @@ export default function Header() {
     { name: 'skills', href: '#skills' },
     { name: 'awards', href: '/#awards' },
     { name: 'experiences', href: '/#experiences' },
-    { name: 'active-projects', href: '/#projects' },
+    { name: 'works', href: '/#works' },
     { name: 'recent-posts', href: '/#recent-posts' },
+    { name: 'products', href: '/#products' },
     { name: 'products', href: '/#product' },
+    { name: 'active-projects', href: '/#projects' },
     { name: 'posts', href: '/blogs/1' },
   ];
 

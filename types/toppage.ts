@@ -44,3 +44,15 @@ export type Project = {
   repo: string;
   site: string | undefined;
 };
+
+/**
+ * @package
+ */
+export type Work = {
+  genre: string;
+  name: string;
+  summary: string;
+  start: date;
+  end?: date;
+  technologies: string[];
+}
