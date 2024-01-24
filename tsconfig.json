@@ -36,6 +36,6 @@
   "exclude": ["node_modules"],
   "ts-node": {
     "module": "CommonJS",
-    "strict": true
-  }
+    "strict": true,
+  },
 }

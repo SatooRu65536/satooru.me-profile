@@ -49,7 +49,7 @@ export function MaterialSymbolsArrowBackIos(props: SVGProps<SVGSVGElement>) {
       <path
         fill="currentColor"
         d="M10 22L0 12L10 2l1.775 1.775L3.55 12l8.225 8.225z"
-       />
+      />
     </svg>
   );
 }

@@ -55,4 +55,4 @@ export type Work = {
   start: date;
   end?: date;
   technologies: string[];
-}
+};
