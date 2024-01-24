@@ -7,6 +7,7 @@ import styles from './page.module.scss';
 import ToHtml from '@/component/share/toHtml';
 import { formatdate } from '@/component/util/format';
 import Thumbnail from '@/component/share/card/thumbnail';
+import BlogNavigation from '@/component/share/blognavigation';
 
 type StaticParams = {
   slug: string[];
@@ -41,6 +42,8 @@ export default function Page(props: Props) {
 
   return (
     <main className={styles.blog}>
+      <BlogNavigation />
+
       <div className={styles.container}>
         <h1 className={styles.title}>{article.meta.title}</h1>
         <p className={styles.created_at}>

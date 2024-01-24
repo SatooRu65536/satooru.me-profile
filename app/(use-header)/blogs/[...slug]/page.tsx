@@ -1,7 +1,7 @@
+import BlogNavigation from '@/component/share/BlogNavigation';
 import Card from '@/component/share/card';
 import Pagenation from '@/component/share/pagenation';
 import {
-  getArticle,
   getArticleCount,
   getArticles,
   getCategories,
@@ -59,6 +59,8 @@ export default function Page(props: Props) {
 
   return (
     <main className={styles.blog}>
+      <BlogNavigation />
+
       <h1 className={styles.title}>{categoryName}</h1>
 
       <div className={styles.container}>
