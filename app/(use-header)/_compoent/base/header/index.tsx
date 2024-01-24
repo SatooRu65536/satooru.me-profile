@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import styles from "./header.module.scss";
+import styles from "./index.module.scss";
 import { useDisclosure } from "@mantine/hooks";
 
 export default function Header() {

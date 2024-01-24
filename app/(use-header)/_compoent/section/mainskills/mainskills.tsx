@@ -1,5 +1,5 @@
 import styles from "./mainskills.module.scss";
-import Progress from "@/component/ui/progress/progress";
+import Progress from "@/component/share/progress/progress";
 import { Progresses } from "@/types";
 
 export default function Mainskills() {

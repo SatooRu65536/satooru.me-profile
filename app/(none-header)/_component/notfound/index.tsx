@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import styles from "./notfound.module.scss";
+import styles from "./index.module.scss";
 import { useRouter } from "next/navigation";
 
 export default function NotFound() {

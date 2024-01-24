@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../globals.css";
 
 const siteName = "SatooRu's Profile";
 const description = "佐藤さとる のプロフィールサイトです.";

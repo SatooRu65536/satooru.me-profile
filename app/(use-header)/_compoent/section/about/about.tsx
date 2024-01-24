@@ -1,4 +1,4 @@
-import { RiTwitterXFill } from "@/component/ui/icon/icon";
+import { RiTwitterXFill } from "@/component/share/icon/icon";
 import styles from "./about.module.scss";
 import GitHubIcon from "@mui/icons-material/GitHub";
 

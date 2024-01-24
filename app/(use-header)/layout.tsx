@@ -1,16 +1,15 @@
-import "../globals.css";
-import Header from "@/component/base/header/header";
-import { Shippori_Mincho } from "next/font/google";
-import Footer from "@/component/base/footer/footer";
+import '../globals.css';
+import { Shippori_Mincho } from 'next/font/google';
+import { Footer, Header } from './_compoent/base';
 
 const noto = Shippori_Mincho({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
 });
 
 const siteName = "SatooRu's Profile";
-const description = "佐藤さとる のプロフィールサイトです.";
-const url = "https://satooru.me/";
+const description = '佐藤さとる のプロフィールサイトです.';
+const url = 'https://satooru.me/';
 
 export const metadata = {
   metadataBase: new URL(url),
@@ -21,14 +20,14 @@ export const metadata = {
     description,
     url,
     siteName,
-    locale: "ja_JP",
-    type: "website",
+    locale: 'ja_JP',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: siteName,
     description,
-    site: "@SatooRu_65536",
+    site: '@SatooRu_65536',
   },
 };
 
@@ -41,7 +40,7 @@ export default function RootLayout({
     <html lang="ja">
       <body
         style={{
-          ["--font-serif" as string]: `${noto.style.fontFamily}, serif`,
+          ['--font-serif' as string]: `${noto.style.fontFamily}, serif`,
         }}
       >
         <Header />

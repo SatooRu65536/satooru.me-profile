@@ -1,9 +1,9 @@
 "use client";
 
-import { jumpToLink } from "@/component/util";
+import { jumpTo } from "@/component/util";
 import styles from "./awards.module.scss";
 import { Award } from "@/types/index";
-import { MaterialSymbolsOpenInNewRounded } from "@/component/ui/icon/icon";
+import { MaterialSymbolsOpenInNewRounded } from "@/component/share/icon/icon";
 
 export default function Awards() {
   const awards: Award[] = [
@@ -94,7 +94,7 @@ export default function Awards() {
                 {award.link && (
                   <MaterialSymbolsOpenInNewRounded
                     className={styles.link}
-                    onClick={() => jumpToLink(award.link as string)}
+                    onClick={() => jumpTo(award.link as string)}
                   />
                 )}
               </p>
