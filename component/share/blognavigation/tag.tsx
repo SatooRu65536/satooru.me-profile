@@ -18,7 +18,7 @@ export default function Tag(props: Props) {
 
   return (
     <a
-      href={id === '/' ? `/blogs/${id}/1` : 'blogs/1'}
+      href={id === '/' ? 'blogs/1' : `/blogs/${id}/1`}
       className={`${styles.btn} ${isCurrent && styles.current}`}
     >
       {name}
