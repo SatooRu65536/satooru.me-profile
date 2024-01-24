@@ -1,13 +1,13 @@
+import styles from './page.module.scss';
+import BlogNavigation from '@/component/share/blognavigation';
+import Thumbnail from '@/component/share/card/thumbnail';
+import ToHtml from '@/component/share/toHtml';
+import { formatdate } from '@/component/util/format';
 import {
   getArticle,
   getArticles,
   getCategories,
 } from '@/component/util/loadFiles';
-import styles from './page.module.scss';
-import ToHtml from '@/component/share/toHtml';
-import { formatdate } from '@/component/util/format';
-import Thumbnail from '@/component/share/card/thumbnail';
-import BlogNavigation from '@/component/share/blognavigation';
 
 type StaticParams = {
   slug: string[];

@@ -1,4 +1,5 @@
-import BlogNavigation from '@/component/share/BlogNavigation';
+import styles from './page.module.scss';
+import BlogNavigation from '@/component/share/blognavigation';
 import Card from '@/component/share/card';
 import Pagenation from '@/component/share/pagenation';
 import {
@@ -7,7 +8,6 @@ import {
   getCategories,
   getCategoryName,
 } from '@/component/util/loadFiles';
-import styles from './page.module.scss';
 
 const CONTENTS_NUM = 24;
 

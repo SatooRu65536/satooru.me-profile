@@ -1,7 +1,7 @@
 'use client';
 
-import styles from './index.module.scss';
 import { useDisclosure } from '@mantine/hooks';
+import styles from './index.module.scss';
 
 export default function Header() {
   const [opened, { open, close }] = useDisclosure(false);

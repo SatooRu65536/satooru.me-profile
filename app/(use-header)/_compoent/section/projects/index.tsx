@@ -1,9 +1,10 @@
 'use client';
-import { Project } from '@/types';
-import styles from './index.module.scss';
+
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WebAssetIcon from '@mui/icons-material/WebAsset';
 import { useEffect, useState } from 'react';
+import styles from './index.module.scss';
+import { Project } from '@/types';
 
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -19,7 +20,7 @@ export default function Projects() {
           const twoWeekTime = 1000 * 60 * 60 * 24 * 14;
           if (new Date().getTime() - updatedAt.getTime() > twoWeekTime) return;
 
-          const name = d.name;
+          const { name } = d;
           const summary = d.description;
           const tags = d.topics;
           if (d.language) tags.unshift(d.language);

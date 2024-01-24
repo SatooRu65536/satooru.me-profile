@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
-import { Award } from '@/types';
 import { MaterialSymbolsOpenInNewRounded } from '@/component/share/icon/icon';
+import { Award } from '@/types';
 
 export default function Awards() {
   const awards: Award[] = [

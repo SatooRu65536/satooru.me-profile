@@ -1,5 +1,6 @@
 import '../globals.css';
 import { Shippori_Mincho } from 'next/font/google';
+import { ReactNode } from 'react';
 import { Footer, Header } from './_compoent/base';
 
 const noto = Shippori_Mincho({
@@ -34,7 +35,7 @@ export const metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="ja">

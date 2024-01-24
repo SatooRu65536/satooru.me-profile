@@ -7,9 +7,6 @@
   ],
   "ignorePatterns": ["next.config.js", "node_modules/"],
   "plugins": ["unused-imports", "import"],
-  "compilerOptions": {
-    "plugins": ["eslint-plugin-import-access"]
-  },
   "rules": {
     "import/order": [
       "error",

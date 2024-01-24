@@ -1,5 +1,5 @@
-import { Experience } from '@/types';
 import styles from './index.module.scss';
+import { Experience } from '@/types';
 
 export default function Experiences() {
   const experiences: Experience[] = [
@@ -101,7 +101,7 @@ export default function Experiences() {
                         {experience.start}
                         {' - '}
                         {experience.end ? experience.end : '現在'}
-                        {experience.location && ', ' + experience.location}
+                        {experience.location && `, ${experience.location}`}
                         {', '}
                       </p>
                       <p className={styles.overview}>{experience.overview}</p>

@@ -1,6 +1,6 @@
-import { getAllArticles } from '@/component/util/loadFiles';
 import styles from './index.module.scss';
 import Card from '@/component/share/card';
+import { getAllArticles } from '@/component/util/loadFiles';
 
 export default function RecentPosts() {
   const article = getAllArticles();
