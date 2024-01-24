@@ -1,4 +1,4 @@
-import { MaterialSymbolsArrowBackIos } from '../icon/icon';
+import BackBtn from './backbtn';
 import styles from './index.module.scss';
 import Tag from './tag';
 import { getCategories, getCategoryName } from '@/component/util/loadFiles';
@@ -11,9 +11,7 @@ export default function BlogNavigation() {
 
   return (
     <div className={styles.blog_head}>
-      <a href="/">
-        <MaterialSymbolsArrowBackIos className={styles.arrow} />
-      </a>
+      <BackBtn />
 
       <Tag id={'/'} name={'全ての記事'} />
       {categoryNames.map((c) => (
