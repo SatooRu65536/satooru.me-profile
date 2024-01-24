@@ -22,6 +22,7 @@ export default function Home() {
       <Product />
       <Projects />
       <Product />
+      <Projects />
     </main>
   );
 }
