@@ -10,7 +10,7 @@
   transition: all 0.5s ease;
   pointer-events: all;
 
-  &[data-opend="true"] {
+  &[data-opend='true'] {
     top: 0;
   }
 
@@ -22,7 +22,7 @@
       position: relative;
 
       &::before {
-        content: "";
+        content: '';
         height: 1px;
         background-color: var(--black);
         position: absolute;
@@ -86,7 +86,7 @@
       top: calc(10px * var(--i));
     }
 
-    &[data-opend="true"] {
+    &[data-opend='true'] {
       div {
         &:nth-child(1) {
           transform: rotate(45deg);

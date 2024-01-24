@@ -5,18 +5,10 @@
     "prettier",
     "plugin:import/typescript"
   ],
-  "ignorePatterns": [
-    "next.config.js",
-    "node_modules/"
-  ],
-  "plugins": [
-    "unused-imports",
-    "import"
-  ],
+  "ignorePatterns": ["next.config.js", "node_modules/"],
+  "plugins": ["unused-imports", "import"],
   "compilerOptions": {
-    "plugins": [
-      "eslint-plugin-import-access"
-    ]
+    "plugins": ["eslint-plugin-import-access"]
   },
   "rules": {
     "import/order": [
@@ -56,9 +48,7 @@
     "no-console": [
       "warn",
       {
-        "allow": [
-          "error"
-        ]
+        "allow": ["error"]
       }
     ],
     //分割代入を優先する
@@ -74,10 +64,7 @@
     //早期リターンさせる
     "no-else-return": "error",
     //厳密等価演算子使用させる
-    "eqeqeq": [
-      "error",
-      "smart"
-    ],
+    "eqeqeq": ["error", "smart"],
     "prefer-template": "error",
     "@next/next/no-img-element": "off"
   }

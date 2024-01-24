@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
 export function RiTwitterXFill(props: SVGProps<SVGSVGElement>) {
   return (
@@ -18,7 +18,7 @@ export function RiTwitterXFill(props: SVGProps<SVGSVGElement>) {
 }
 
 export function MaterialSymbolsOpenInNewRounded(
-  props: SVGProps<SVGSVGElement>
+  props: SVGProps<SVGSVGElement>,
 ) {
   return (
     <svg

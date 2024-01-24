@@ -1,8 +1,8 @@
-import "../globals.css";
+import '../globals.css';
 
 const siteName = "SatooRu's Profile";
-const description = "佐藤さとる のプロフィールサイトです.";
-const url = "https://satooru.me/";
+const description = '佐藤さとる のプロフィールサイトです.';
+const url = 'https://satooru.me/';
 
 export const metadata = {
   metadataBase: new URL(url),
@@ -13,14 +13,14 @@ export const metadata = {
     description,
     url,
     siteName,
-    locale: "ja_JP",
-    type: "website",
+    locale: 'ja_JP',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: siteName,
     description,
-    site: "@SatooRu_65536",
+    site: '@SatooRu_65536',
   },
 };
 

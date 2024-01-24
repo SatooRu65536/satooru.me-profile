@@ -1,22 +1,22 @@
-"use client";
-import { useRouter } from "next/navigation";
-import styles from "./index.module.scss";
-import { useDisclosure } from "@mantine/hooks";
+'use client';
+import { useRouter } from 'next/navigation';
+import styles from './index.module.scss';
+import { useDisclosure } from '@mantine/hooks';
 
 export default function Header() {
   const [opened, { open, close }] = useDisclosure(false);
   const router = useRouter();
 
   const navigation = [
-    { name: "top", href: "#top" },
-    { name: "about", href: "#about" },
-    { name: "main-skills", href: "#main-skills" },
-    { name: "skills", href: "#skills" },
-    { name: "awards", href: "#awards" },
-    { name: "experiences", href: "#experiences" },
-    { name: "active-projects", href: "#projects" },
-    { name: "recent-posts", href: "#recent-posts" },
-    { name: "posts", href: "https://blog.satooru.me/" },
+    { name: 'top', href: '#top' },
+    { name: 'about', href: '#about' },
+    { name: 'main-skills', href: '#main-skills' },
+    { name: 'skills', href: '#skills' },
+    { name: 'awards', href: '#awards' },
+    { name: 'experiences', href: '#experiences' },
+    { name: 'active-projects', href: '#projects' },
+    { name: 'recent-posts', href: '#recent-posts' },
+    { name: 'posts', href: 'https://blog.satooru.me/' },
   ];
 
   function trigle() {
@@ -39,14 +39,14 @@ export default function Header() {
       </div>
 
       <header className={styles.header}>
-        <h1 className={styles.title} onClick={() => router.push("/")}>
+        <h1 className={styles.title} onClick={() => router.push('/')}>
           SatooRu&apos;s Profile
         </h1>
 
         <div className={styles.hamburger} onClick={trigle} data-opend={opened}>
-          <div style={{ ["--i" as string]: 0 }}></div>
-          <div style={{ ["--i" as string]: 1 }}></div>
-          <div style={{ ["--i" as string]: 2 }}></div>
+          <div style={{ ['--i' as string]: 0 }}></div>
+          <div style={{ ['--i' as string]: 1 }}></div>
+          <div style={{ ['--i' as string]: 2 }}></div>
         </div>
       </header>
     </>

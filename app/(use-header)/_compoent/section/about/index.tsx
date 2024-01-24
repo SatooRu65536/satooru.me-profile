@@ -1,6 +1,6 @@
-import { RiTwitterXFill } from "@/component/share/icon/icon";
-import styles from "./about.module.scss";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import { RiTwitterXFill } from '@/component/share/icon/icon';
+import styles from './about.module.scss';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function About() {
   return (

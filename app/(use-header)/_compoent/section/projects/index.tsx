@@ -1,16 +1,16 @@
-"use client";
-import { Project } from "@/types";
-import styles from "./projects.module.scss";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import WebAssetIcon from "@mui/icons-material/WebAsset";
-import { useEffect, useState } from "react";
+'use client';
+import { Project } from '@/types';
+import styles from './projects.module.scss';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import WebAssetIcon from '@mui/icons-material/WebAsset';
+import { useEffect, useState } from 'react';
 
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
     const url =
-      "https://api.github.com/users/SatooRu65536/repos?per_page=10&sort=pushed";
+      'https://api.github.com/users/SatooRu65536/repos?per_page=10&sort=pushed';
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

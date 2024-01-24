@@ -4,12 +4,12 @@ import path from 'path';
 
 /**
  * @description 記事を取得する
- * @returns 
+ * @returns
  */
 export function getArticles(dir: string): Article<PageMeta>[] {
-  const contentsDir = path.join(process.cwd(), "public/articles/posts", dir);
+  const contentsDir = path.join(process.cwd(), 'public/articles/posts', dir);
   const filenames = fs.readdirSync(contentsDir);
-  const filteredFilenames = filenames.filter((f) => !f.startsWith("."));
+  const filteredFilenames = filenames.filter((f) => !f.startsWith('.'));
 
   console.log(filteredFilenames);
 

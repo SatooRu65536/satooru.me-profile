@@ -1,7 +1,7 @@
-"use client";
-import styles from "./progress.module.scss";
-import { Progresses } from "@/types";
-import { RingProgress } from "@mantine/core";
+'use client';
+import styles from './progress.module.scss';
+import { Progresses } from '@/types';
+import { RingProgress } from '@mantine/core';
 
 export default function Progress({ progress }: { progress: Progresses }) {
   return (
@@ -9,7 +9,7 @@ export default function Progress({ progress }: { progress: Progresses }) {
       {progress.map((item) => {
         return (
           <RingProgress
-          className={styles.ringProgress}
+            className={styles.ringProgress}
             size={200}
             label={<h1 className={styles.label}>{item.name}</h1>}
             sections={[

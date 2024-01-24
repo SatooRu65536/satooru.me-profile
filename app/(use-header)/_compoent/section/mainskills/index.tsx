@@ -1,27 +1,27 @@
-import styles from "./mainskills.module.scss";
-import Progress from "@/component/share/progress/progress";
-import { Progresses } from "@/types";
+import styles from './mainskills.module.scss';
+import Progress from '@/component/share/progress/progress';
+import { Progresses } from '@/types';
 
 export default function Mainskills() {
   const progress: Progresses = [
     {
-      name: "HTML/CSS",
-      color: "green",
+      name: 'HTML/CSS',
+      color: 'green',
       persentage: 95,
     },
     {
-      name: "JavaScript",
-      color: "orange",
+      name: 'JavaScript',
+      color: 'orange',
       persentage: 95,
     },
     {
-      name: "TypeScript",
-      color: "blue",
+      name: 'TypeScript',
+      color: 'blue',
       persentage: 70,
     },
     {
-      name: "Python",
-      color: "red",
+      name: 'Python',
+      color: 'red',
       persentage: 95,
     },
   ];

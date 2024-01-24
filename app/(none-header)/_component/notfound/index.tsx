@@ -1,13 +1,13 @@
-"use client";
-import Image from "next/image";
-import styles from "./index.module.scss";
-import { useRouter } from "next/navigation";
+'use client';
+import Image from 'next/image';
+import styles from './index.module.scss';
+import { useRouter } from 'next/navigation';
 
 export default function NotFound() {
   const router = useRouter();
 
   return (
-    <div className={styles.notfound} onClick={() => router.push("/")}>
+    <div className={styles.notfound} onClick={() => router.push('/')}>
       <div className={styles.imgWrapper}>
         <Image
           className={styles.penguin}

@@ -1,5 +1,5 @@
-import styles from "./index.module.scss";
-import Image from "next/image";
+import styles from './index.module.scss';
+import Image from 'next/image';
 
 export default function Top() {
   return (
@@ -12,7 +12,7 @@ export default function Top() {
         sizes="100%"
         fill
         priority
-        alt={"背景"}
+        alt={'背景'}
       />
     </section>
   );
