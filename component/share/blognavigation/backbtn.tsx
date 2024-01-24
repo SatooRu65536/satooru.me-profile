@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import React from 'react';
 import { MaterialSymbolsArrowBackIos } from '../icon/icon';
 import styles from './index.module.scss';
 
