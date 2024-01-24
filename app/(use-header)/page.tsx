@@ -21,6 +21,7 @@ export default function Home() {
       <RecentPosts />
       <Product />
       <Projects />
+      <Product />
     </main>
   );
 }
