@@ -4,8 +4,12 @@ import { Article, ArticleMetaFormatted } from '@/types';
 
 const DEFAULT_POST_THUMBNAIL = '/images/default.webp';
 
+type Product = {
+  type: string;
+};
+
 type Props = {
-  article: Article<ArticleMetaFormatted>;
+  article: Article<ArticleMetaFormatted, Product>;
 };
 
 export default function Card(props: Props) {
@@ -23,7 +27,10 @@ export default function Card(props: Props) {
         </div>
 
         <div className={styles.title_wrapper}>
-          <h2 className={styles.product_title}>{article.meta.title}</h2>
+          <div>
+            <h3>{article.type}</h3>
+            <h2 className={styles.product_title}>{article.meta.title}</h2>
+          </div>
           <p className={styles.date}>{formatdate(article.meta.createdAt)}</p>
         </div>
       </div>

@@ -1,9 +1,19 @@
 import Card from './card';
 import styles from './index.module.scss';
-import { getArticlesByCategory } from '@/component/util/loadFiles';
+import {
+  getArticlesByCategoryWithT,
+  parseMetaTag,
+} from '@/component/util/loadFiles';
+
+type Product = {
+  type: string;
+};
 
 export default function Products() {
-  const products = getArticlesByCategory('product');
+  const parsetag = (tags: string[]): Product => ({
+    type: parseMetaTag(tags, 'type', 'その他'),
+  });
+  const products = getArticlesByCategoryWithT<Product>('product', parsetag);
 
   return (
     <section className={styles.product} id="products">

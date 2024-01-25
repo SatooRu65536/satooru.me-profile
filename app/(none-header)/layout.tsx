@@ -1,28 +1,17 @@
 import { ReactNode } from 'react';
 import '../globals.css';
-
-const siteName = "SatooRu's Profile";
-const description = '佐藤さとる のプロフィールサイトです.';
-const url = 'https://satooru.me/';
+import {
+  description,
+  metadataBase,
+  openGraph,
+  twitter,
+} from '@/component/metadata';
 
 export const metadata = {
-  metadataBase: new URL(url),
-  title: siteName,
+  metadataBase,
   description,
-  openGraph: {
-    title: siteName,
-    description,
-    url,
-    siteName,
-    locale: 'ja_JP',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteName,
-    description,
-    site: '@SatooRu_65536',
-  },
+  openGraph,
+  twitter,
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

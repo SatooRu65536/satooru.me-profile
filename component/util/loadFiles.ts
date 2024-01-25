@@ -37,10 +37,12 @@ export function getCategoryName(category: string): string {
  * @param filename ファイル名
  * @returns 記事
  */
-function getArticleByFilename(
+function getArticleByFilename<T>(
   dir: string,
   filename: string,
-): Article<ArticleMetaFormatted> {
+  // eslint-disable-next-line no-unused-vars
+  parseFunc?: (tags: string[]) => T,
+): Article<ArticleMetaFormatted, T> {
   const contentsDir = path.join(process.cwd(), 'public/articles/', dir);
   const filePath = path.join(contentsDir, filename);
   const fileContents = fs.readFileSync(filePath, 'utf8');
@@ -56,7 +58,8 @@ function getArticleByFilename(
   );
   const createdAt = new Date(createdAtStr);
 
-  const article: Article<ArticleMetaFormatted> = {
+  const tag = parseFunc ? parseFunc(tags) : {} as T;
+  const article: Article<ArticleMetaFormatted, T> = {
     path: `/blog/${dir}/${meta.number}`,
     filename: filename,
     id: meta.number,
@@ -67,6 +70,7 @@ function getArticleByFilename(
       createdAt: createdAt,
       thumbnail: null,
     },
+    ...tag
   };
 
   const matches = md.content.match(IMAGE_REGEX);
@@ -90,6 +94,31 @@ export function getArticlesByCategory(
 
   const articles = filteredFilenames.map((fname) =>
     getArticleByFilename(dir, fname),
+  );
+
+  const filteredArticles = articles.filter((a) => a.meta.title !== 'README');
+  filteredArticles.sort((a, b) =>
+    a.meta.createdAt > b.meta.createdAt ? -1 : 1,
+  );
+
+  return filteredArticles;
+}
+
+/**
+ * @description 記事を取得し、固有タグをパースする
+ * @returns
+ */
+export function getArticlesByCategoryWithT<T>(
+  dir: string,
+  // eslint-disable-next-line no-unused-vars
+  parseFunc: (tags: string[]) => T,
+): Article<ArticleMetaFormatted, T>[] {
+  const contentsDir = path.join(process.cwd(), 'public/articles/', dir);
+  const filenames = fs.readdirSync(contentsDir);
+  const filteredFilenames = filenames.filter((f) => !f.startsWith('.'));
+
+  const articles = filteredFilenames.map((fname) =>
+    getArticleByFilename<T>(dir, fname, parseFunc),
   );
 
   const filteredArticles = articles.filter((a) => a.meta.title !== 'README');
@@ -161,7 +190,7 @@ export function getAllArticles(): Article<ArticleMetaFormatted>[] {
  * @param check 正規表現でチェックする
  * @returns タグ
  */
-function parseMetaTag(
+export function parseMetaTag(
   tags: string[],
   key: string,
   defaultValue: string,

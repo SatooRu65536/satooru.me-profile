@@ -32,10 +32,10 @@ export type ArticleMetaFormatted = BaseMeta<string[], Date> & {
 /**
  * @package
  */
-export type Article<T extends ArticleMeta | ArticleMetaFormatted> = {
+export type Article<T extends ArticleMeta | ArticleMetaFormatted, U={}> = {
   path: string;
   filename: string;
   id: number;
   content: string;
   meta: T;
-};
+} & U;
