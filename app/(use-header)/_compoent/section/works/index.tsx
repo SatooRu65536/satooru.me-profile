@@ -46,7 +46,7 @@ export default function Works() {
         {works.map((work, index) => {
           return (
             <div className={styles.box} key={index}>
-              <h3 className={styles.date}>
+              <p className={styles.date}>
                 <span>{work.start}</span>
                 {work.end ? (
                   <span>
@@ -56,7 +56,7 @@ export default function Works() {
                 ) : (
                   <span>{' - 現在'}</span>
                 )}
-              </h3>
+              </p>
 
               <p className={styles.about}>
                 <span className={styles.genre}>[{work.genre}]</span>

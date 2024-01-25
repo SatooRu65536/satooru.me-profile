@@ -1,6 +1,7 @@
 const siteName = "SatooRu's Profile";
 const url = 'https://satooru.me/';
 
+export const title = "SatooRu's Profile";
 export const metadataBase = new URL(url);
 export const description = '佐藤さとる のプロフィールサイトです.';
 export const openGraph = {

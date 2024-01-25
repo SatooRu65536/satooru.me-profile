@@ -84,12 +84,12 @@ export default function Awards() {
         {awards.map((award, index) => {
           return (
             <div className={styles.box} key={index}>
-              <h3 className={styles.date}>{award.date}</h3>
+              <p className={styles.date}>{award.date}</p>
               <p className={styles.about}>
                 <span className={styles.award}>[{award.award}]</span>
                 <span>{award.name}</span>
                 {award.link && (
-                  <a href={award.link} target="_blank">
+                  <a href={award.link} target="_blank" aria-label={award.name}>
                     <MaterialSymbolsOpenInNewRounded className={styles.link} />
                   </a>
                 )}

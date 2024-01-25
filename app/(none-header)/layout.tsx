@@ -4,10 +4,12 @@ import {
   description,
   metadataBase,
   openGraph,
+  title,
   twitter,
 } from '@/component/metadata';
 
 export const metadata = {
+  title,
   metadataBase,
   description,
   openGraph,

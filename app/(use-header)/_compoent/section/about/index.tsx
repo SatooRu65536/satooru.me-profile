@@ -23,6 +23,7 @@ export default function About() {
             className={styles.link}
             target="_blank"
             href="https://github.com/SatooRu65536"
+            aria-label="GitHub"
           >
             <GitHubIcon className={styles.icon} />
           </a>
@@ -30,6 +31,7 @@ export default function About() {
             className={styles.link}
             target="_blank"
             href="https://x.com/SatooRu_65536"
+            aria-label="Twitter(X)"
           >
             <RiTwitterXFill className={styles.icon} />
           </a>

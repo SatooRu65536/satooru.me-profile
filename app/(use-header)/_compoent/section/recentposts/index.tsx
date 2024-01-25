@@ -7,7 +7,7 @@ export default function RecentPosts() {
   const recent = article.slice(0, 3);
 
   return (
-    <section className={styles.recent_post} id="recent-post">
+    <section className={styles.recent_post} id="recent-posts">
       <h1 className={styles.title}>Recent Posts</h1>
 
       <div className={styles.container}>

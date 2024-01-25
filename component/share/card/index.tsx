@@ -29,9 +29,9 @@ export default function Card({ article }: Props) {
           alt={article.meta.title}
         />
         <div className={styles.container}>
-          <h3 className={styles.title}>{article.meta.title}</h3>
+          <h2 className={styles.title}>{article.meta.title}</h2>
           <p className={styles.content}>{mdToText(article.content)}</p>
-          <h3 className={styles.date}>{formatdate(article.meta.createdAt)}</h3>
+          <p className={styles.date}>{formatdate(article.meta.createdAt)}</p>
         </div>
       </div>
     </a>

@@ -1,4 +1,5 @@
 import '../globals.css';
+import { Metadata } from 'next';
 import { Shippori_Mincho } from 'next/font/google';
 import { ReactNode } from 'react';
 import { Footer, Header } from './_compoent/base';
@@ -6,6 +7,7 @@ import {
   description,
   metadataBase,
   openGraph,
+  title,
   twitter,
 } from '@/component/metadata';
 
@@ -14,7 +16,8 @@ const noto = Shippori_Mincho({
   subsets: ['latin'],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
+  title,
   metadataBase,
   description,
   openGraph,
