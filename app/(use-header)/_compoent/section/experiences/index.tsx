@@ -69,7 +69,7 @@ export default function Experiences() {
     },
   ];
 
-  experiences.sort((a, b) => a.start > b.start ? 1 : -1);
+  experiences.sort((a, b) => (a.start > b.start ? 1 : -1));
 
   return (
     <section className={styles.experiences} id="experiences">

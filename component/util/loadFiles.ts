@@ -58,7 +58,7 @@ function getArticleByFilename<T>(
   );
   const createdAt = new Date(createdAtStr);
 
-  const tag = parseFunc ? parseFunc(tags) : {} as T;
+  const tag = parseFunc ? parseFunc(tags) : ({} as T);
   const article: Article<ArticleMetaFormatted, T> = {
     path: `/blog/${dir}/${meta.number}`,
     filename: filename,
@@ -70,7 +70,7 @@ function getArticleByFilename<T>(
       createdAt: createdAt,
       thumbnail: null,
     },
-    ...tag
+    ...tag,
   };
 
   const matches = md.content.match(IMAGE_REGEX);

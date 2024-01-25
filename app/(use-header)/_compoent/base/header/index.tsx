@@ -16,7 +16,6 @@ export default function Header() {
     { name: 'works', href: '/#works' },
     { name: 'recent-posts', href: '/#recent-posts' },
     { name: 'products', href: '/#products' },
-    { name: 'products', href: '/#product' },
     { name: 'active-projects', href: '/#projects' },
     { name: 'posts', href: '/blogs/1' },
   ];

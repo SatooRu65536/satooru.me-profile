@@ -9,6 +9,14 @@ import { Project } from '@/types';
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
 
+  function toUnique(tags: string[]): string[] {
+    const lowerTags = tags.map((tag) => tag.toLowerCase());
+    const uniqueTags = lowerTags.filter(
+      (tag, index) => lowerTags.indexOf(tag) === index,
+    );
+    return uniqueTags;
+  }
+
   useEffect(() => {
     const url =
       'https://api.github.com/users/SatooRu65536/repos?per_page=10&sort=pushed';
@@ -22,8 +30,9 @@ export default function Projects() {
 
           const { name } = d;
           const summary = d.description;
-          const tags = d.topics;
-          if (d.language) tags.unshift(d.language);
+          const tagsSnap = d.topics;
+          if (d.language) tagsSnap.unshift(d.language);
+          const tags = toUnique(tagsSnap);
           const repo = d.html_url;
           const site = d.homepage;
           const project: Project = { name, summary, tags, repo, site };
