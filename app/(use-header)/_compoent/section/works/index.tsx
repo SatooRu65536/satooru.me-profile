@@ -23,7 +23,6 @@ export default function Works() {
       name: '業務委託',
       summary: '印刷会社のwebシステム開発',
       start: '2023.09',
-      end: '2023.10',
       technologies: ['Rails', 'Haml', 'Bootstrap', 'jQuery', 'DataTables'],
     },
   ];
@@ -49,11 +48,13 @@ export default function Works() {
             <div className={styles.box} key={index}>
               <h3 className={styles.date}>
                 <span>{work.start}</span>
-                {work.end && (
+                {work.end ? (
                   <span>
                     {' - '}
                     {work.end}
                   </span>
+                ) : (
+                  <span>{' - 現在'}</span>
                 )}
               </h3>
 

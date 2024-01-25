@@ -10,7 +10,7 @@ export default function Experiences() {
       location: '愛工大4号館別館 108',
       overview: '梶研究室に参加',
       url: 'https://kajilab.net/',
-      fill: true,
+      fill: false,
     },
     {
       description: 'システム工学研究会 入部',
@@ -60,7 +60,7 @@ export default function Experiences() {
     {
       description: '名電高校入学',
       organization: 'Meiden H.S.',
-      start: '2020.40',
+      start: '2020.04',
       end: '2023.03',
       location: '愛知県名古屋市',
       overview: '情報科学科に入学した。',
@@ -68,6 +68,8 @@ export default function Experiences() {
       fill: true,
     },
   ];
+
+  experiences.sort((a, b) => a.start > b.start ? 1 : -1);
 
   return (
     <section className={styles.experiences} id="experiences">

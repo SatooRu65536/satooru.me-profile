@@ -4,17 +4,12 @@ export default function Skills() {
   const skills = [
     {
       name: 'HTML/CSS',
-      summary:
-        'HTMLできる。SCSSがめっちゃ好き。最近CSSフレームワークの意義を理解した。mantine最高!',
+      summary: 'SCSSがめっちゃ好き。CSS Modules とは仲良いです',
     },
     {
-      name: 'JavaScript',
-      summary: 'Node.js でフロントとバック両方触ってます。',
-    },
-    {
-      name: 'TypeScript',
+      name: 'JavaScript/TypeScript',
       summary:
-        '最近TypeScriptの魅力に気付いた。普通にできるけどえぐい型は知らない。',
+        '一番好きな言語でフロントとバック両方で使ってます。型パズルはじめました。',
     },
     {
       name: 'Python',
@@ -22,30 +17,35 @@ export default function Skills() {
         'センシングしてこねこねしてグラフを生成するために使いまくってます。きらい',
     },
     {
-      name: 'Kotlin',
-      summary: '研究室で使えた方が良いから勉強する。',
-    },
-    {
       name: 'Rust',
       summary: '特に目的はないけど、楽しそうだから勉強中。',
     },
     {
-      name: 'Swift/Ruby/PHP',
-      summary: '触ったことがあり、触れるが、触らない。',
+      name: 'Ruby',
+      summary: 'お仕事で触ってるけどきらい。if修飾子だけは好き',
+    },
+    {
+      name: 'C/C#/PHP/Fortran...',
+      summary: '稀に触ります。授業とか Unity とか他大学の研究とか...',
     },
     {
       name: 'web開発',
-      summary: 'Next.js が好き。AppRouterを絶賛使ってます。',
+      summary:
+        'Next.js をメインにたまに Svelte, Vue, Qwik を触ってみたりしてる',
+    },
+    {
+      name: 'センシング',
+      summary:
+        'センシング用Andoid端末でいろんな動作をセンシングしてる。一番のお気に入りは Dragon Night のフェスセンシング',
     },
     {
       name: 'illustrator',
       summary:
-        'ベジェ曲線描くのが得意です（適当）最近はロゴと画面イメージなどを制作するのに使ってます',
+        'ベジェ曲線描くのが得意です（適当）最近はロゴとサイトイメージなどを制作するのに使ってます',
     },
     {
       name: 'After Effects',
-      summary:
-        '超極稀にモーショングラフィックス作ってる。プログラミングの方が楽しい。現在はデモ動画編集用。',
+      summary: 'モーショングラフィックス作ってました。現在はデモ動画編集用。',
     },
     {
       name: 'ペンギン',
@@ -55,7 +55,7 @@ export default function Skills() {
     {
       name: '城・歴史',
       summary:
-        '石垣が一番すき。城巡りしたり古戦場回ったりしてる。何気に城郭検定2級もってます。（1級は無理）',
+        '石垣がすき。城・古戦場・古墳を巡ってる。何気に城郭検定2級もってます。（1級は無理）',
     },
   ];
 
