@@ -4,9 +4,9 @@ import axios from 'axios';
 
 const MARKDOWN_PATH = 'public/articles';
 const IMAGE_DIR = 'public/images/articles';
-const IMAGE_REGEX = /<img.*?src=['"](.*)['"].*>|!\[.*\]\((.*)\)/g;
-const IMAGE_SRC_REGEX = /src=['"](.*)['"]/;
-const IMAGE_MARKDOWN_REGEX = /!\[.*\]\((.*)\)/;
+const IMAGE_REGEX = /<img.*?src=['"](\S*?)['"].*>|!\[.*\]\(([^)]+\.\w{1,5})/g;
+const IMAGE_SRC_REGEX = /src=['"](\S*?)['"]/;
+const IMAGE_MARKDOWN_REGEX = /!\[.*\]\(([^)]+\.\w{1,5})/;
 
 /*
  * URLからファイル名を取得する
@@ -143,6 +143,7 @@ function main() {
         // ファイル名からIDを取得
         const fileId = getFileId(fileName);
         // 画像を保存して、画像のURLを置換したファイルの中身を取得
+        console.log(fileId);
         const replacedContent = saveAndReplaceImages(fileContents, fileId);
         // ファイルの中身を置換
         fs.writeFileSync(filePath, replacedContent, 'utf8');
