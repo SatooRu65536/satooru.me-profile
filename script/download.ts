@@ -143,7 +143,6 @@ function main() {
         // ファイル名からIDを取得
         const fileId = getFileId(fileName);
         // 画像を保存して、画像のURLを置換したファイルの中身を取得
-        console.log(fileId);
         const replacedContent = saveAndReplaceImages(fileContents, fileId);
         // ファイルの中身を置換
         fs.writeFileSync(filePath, replacedContent, 'utf8');

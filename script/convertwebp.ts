@@ -35,7 +35,7 @@ function toAbsolutePath(relativePath: string) {
 async function toWebp(imagePath: string) {
   const absolutePath = toAbsolutePath(imagePath);
   const absoluteWebpPath = toAbsolutePath(toWebpPath(imagePath));
-  exec(`cwebp ${absolutePath} -o ${absoluteWebpPath}`, (error) => {
+  exec(`cwebp -resize 810 0 ${absolutePath} -o ${absoluteWebpPath}`, (error) => {
     if (error) {
       console.error(`Error: ${error.message}`);
       return;
