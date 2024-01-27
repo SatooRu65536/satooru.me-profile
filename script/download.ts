@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
 
-const MARKDOWN_PATH = 'public/articles';
+const MARKDOWN_PATH = 'articles';
 const IMAGE_DIR = 'public/images/articles';
 const IMAGE_REGEX = /<img.*?src=['"](\S*?)['"].*>|!\[.*\]\(([^)]+\.\w{1,5})/g;
 const IMAGE_SRC_REGEX = /src=['"](\S*?)['"]/;

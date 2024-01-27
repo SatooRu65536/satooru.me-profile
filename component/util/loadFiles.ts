@@ -11,7 +11,7 @@ const TOP_IMAGE_REGEX = /^[\s\n]*(<img.*?src=['"](.*)['"].*>|!\[.*\]\((.*)\))/;
  * @returns { string[] } カテゴリー
  */
 export function getCategories(): string[] {
-  const contentsDir = path.join(process.cwd(), 'public/articles/');
+  const contentsDir = path.join(process.cwd(), 'articles/');
   const dirs = fs.readdirSync(contentsDir);
   const filteredDirs = dirs.filter((f) => !f.startsWith('.'));
   return filteredDirs;
@@ -23,7 +23,7 @@ export function getCategories(): string[] {
  * @returns { string } カテゴリー名
  */
 export function getCategoryName(category: string): string {
-  const contentsDir = path.join(process.cwd(), 'public/articles/');
+  const contentsDir = path.join(process.cwd(), 'articles/');
   const titlePath = path.join(contentsDir, category, '.title');
 
   if (fs.existsSync(titlePath)) return fs.readFileSync(titlePath, 'utf8');
@@ -43,7 +43,7 @@ function getArticleByFilename<T>(
   // eslint-disable-next-line no-unused-vars
   parseFunc?: (tags: string[]) => T,
 ): Article<ArticleMetaFormatted, T> {
-  const contentsDir = path.join(process.cwd(), 'public/articles/', dir);
+  const contentsDir = path.join(process.cwd(), 'articles/', dir);
   const filePath = path.join(contentsDir, filename);
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const md = matter(fileContents);
@@ -88,7 +88,7 @@ function getArticleByFilename<T>(
 export function getArticlesByCategory(
   dir: string,
 ): Article<ArticleMetaFormatted>[] {
-  const contentsDir = path.join(process.cwd(), 'public/articles/', dir);
+  const contentsDir = path.join(process.cwd(), 'articles/', dir);
   const filenames = fs.readdirSync(contentsDir);
   const filteredFilenames = filenames.filter((f) => !f.startsWith('.'));
 
@@ -113,7 +113,7 @@ export function getArticlesByCategoryWithT<T>(
   // eslint-disable-next-line no-unused-vars
   parseFunc: (tags: string[]) => T,
 ): Article<ArticleMetaFormatted, T>[] {
-  const contentsDir = path.join(process.cwd(), 'public/articles/', dir);
+  const contentsDir = path.join(process.cwd(), 'articles/', dir);
   const filenames = fs.readdirSync(contentsDir);
   const filteredFilenames = filenames.filter((f) => !f.startsWith('.'));
 
@@ -134,7 +134,7 @@ export function getArticlesByCategoryWithT<T>(
  * @returns { number } 記事数
  */
 export function getArticleCount(dir: string): number {
-  const contentsDir = path.join(process.cwd(), 'public/articles/', dir);
+  const contentsDir = path.join(process.cwd(), 'articles/', dir);
   const filenames = fs.readdirSync(contentsDir);
   const filteredFilenames = filenames.filter((f) => !f.startsWith('.'));
   return filteredFilenames.length;
@@ -171,7 +171,7 @@ export function getArticle(
  * @returns 記事を全て取得する
  */
 export function getAllArticles(): Article<ArticleMetaFormatted>[] {
-  const contentsDir = path.join(process.cwd(), 'public/articles/');
+  const contentsDir = path.join(process.cwd(), 'articles/');
   const dirs = fs.readdirSync(contentsDir);
   const filteredDirs = dirs.filter((f) => !f.startsWith('.'));
 
