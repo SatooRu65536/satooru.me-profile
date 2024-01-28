@@ -11,7 +11,7 @@ export default function BackBtn() {
   return (
     <MaterialSymbolsArrowBackIos
       className={styles.arrow}
-      onClick={() => router.back()}
+      onClick={() => router.push('/')}
     />
   );
 }

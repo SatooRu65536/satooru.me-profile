@@ -17,7 +17,7 @@ export default function Header() {
     { name: 'recent-posts', href: '/#recent-posts' },
     { name: 'products', href: '/#products' },
     { name: 'active-projects', href: '/#projects' },
-    { name: 'posts', href: '/blogs/1' },
+    { name: 'blogs', href: '/blogs/1' },
   ];
 
   function trigle() {

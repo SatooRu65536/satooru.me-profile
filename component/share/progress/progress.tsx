@@ -1,8 +1,8 @@
 'use client';
 
+import { RingProgress } from '@mantine/core';
 import styles from './progress.module.scss';
 import { Progresses } from '@/types';
-import { RingProgress } from '@mantine/core';
 
 export default function Progress({ progress }: { progress: Progresses }) {
   return (
