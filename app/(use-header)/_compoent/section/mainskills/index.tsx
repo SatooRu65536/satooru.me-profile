@@ -17,7 +17,7 @@ export default function Mainskills() {
     {
       name: 'TypeScript',
       color: 'blue',
-      persentage: 70,
+      persentage: 80,
     },
     {
       name: 'Python',

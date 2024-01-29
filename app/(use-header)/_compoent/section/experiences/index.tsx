@@ -4,6 +4,14 @@ import { Experience } from '@/types';
 export default function Experiences() {
   const experiences: Experience[] = [
     {
+      description: 'システム工学研究会 入部',
+      organization: 'SET',
+      start: '2023.04',
+      location: '愛工大4号館別館 310',
+      overview: 'システム工学研究会に入部',
+      url: 'https://set1.ie.aitech.ac.jp/',
+    },
+    {
       description: '梶研究室に参加',
       organization: '梶研',
       start: '2023.04',
@@ -11,14 +19,6 @@ export default function Experiences() {
       overview: '梶研究室に参加',
       url: 'https://kajilab.net/',
       fill: false,
-    },
-    {
-      description: 'システム工学研究会 入部',
-      organization: 'SET',
-      start: '2023.04',
-      location: '愛工大4号館別館 310',
-      overview: 'システム工学研究会に入部',
-      url: 'https://set1.ie.aitech.ac.jp/',
     },
     {
       description: '愛知工業大学 入学',
