@@ -21,7 +21,8 @@
   box-sizing: border-box;
 }
 
-html body {
+html,
+body {
   width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -102,7 +103,7 @@ a {
     }
   }
 
-  pre > code {
+  pre>code {
     display: block;
     padding: 10.5px;
     margin: 0 0 11px;
