@@ -12,7 +12,7 @@ export default function Tag(props: Props) {
   const { id, name } = props;
 
   const path = usePathname();
-  const category = path.split('/')[2];
+  const category = path?.split('/')[2];
   const isAll = !isNaN(Number(category));
   const isCurrent = category === id || (isAll && id === '/');
 
